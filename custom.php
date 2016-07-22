@@ -9,8 +9,8 @@
  <meta name="keywords" content="Hotel,Table Reservation,Booking,Marriage,Halls,Gardens,Decorators,Music,Dj,Resorts,Function halls" />
     <meta name="description" content="Our Plan, Your Joy.Table reservation app,custom search for any restaurant,marriage is made easier">
     <meta name="author" content="Plan Here">
-    <title>PlanHere Custom</title>
-    
+    <title>PlanHere Custome Editor</title>
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
@@ -20,20 +20,20 @@
 
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link href="css/jquery.switch.css" rel="stylesheet">
-	
+
     <!-- Google web fonts -->
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-        
+
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-        
+
 </head>
 <body>
 
@@ -62,10 +62,10 @@
 <section id="hero_2">
 	<div class="intro_title animated fadeInDown">
            <h1>Custom Table</h1>
-              <!-- End bs-wizard --> 
-    </div>   <!-- End intro-title --> 
+              <!-- End bs-wizard -->
+    </div>   <!-- End intro-title -->
 </section><!-- End Section hero_2 -->
-    
+
     <div id="position">
     	<div class="container">
                 	<ul>
@@ -79,8 +79,8 @@
     <div class="row">
     <div class="col-md-8">
     	 <form action="custombe.php" method="post" >
-                           
-                            
+
+
                                 <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Name </label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
@@ -94,15 +94,15 @@
                                                 <input type="text" name="name" class="form-control required" required replaceholder="Number of guests">
                                             </div>
                                         </div>
-                                        <br /><br /> 
+                                        <br /><br />
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Name of the guest </label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <input type="text" name="name" class="form-control required" placeholder="If one,you can mention">
                                             </div>
-                                        </div>       
-                                
-                                
+                                        </div>
+
+
                             </form>
             <table class="table table-striped options_cart">
             <thead>
@@ -242,8 +242,8 @@
             </tbody>
             </table>
             <form >
-                           
-                            
+
+
                                 <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Any more Surprise mention here </label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
@@ -251,9 +251,9 @@
                                             </div>
                                        </div>
                                       </form>
-                
+
     </div><!-- End col-md-8 -->
-    
+
     <aside class="col-md-4">
     <div class="box_style_1">
         <h3 class="inner">- Summary -</h3>
@@ -261,7 +261,7 @@
         <tbody>
         <tr>
             <td>
-                Hotel 
+                Hotel
             </td>
             <td class="text-right">
                 2
@@ -283,7 +283,7 @@
                 $34
             </td>
         </tr>
-       
+
         <tr class="total">
             <td>
                 Total cost
@@ -319,7 +319,7 @@
 <script src="js/functions.js"></script>
 
 
-<script>  
+<script>
 //Incrementer
 $(function () {
 	"use strict";
