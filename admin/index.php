@@ -15,86 +15,17 @@
 
     <!-- Angular material -->
     <link rel="stylesheet" type="text/css" href="assets/skin/css/angular-material.min.css">
-    
+
     <!-- Icomoon -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/icomoon/icomoon.css">    
-    
+    <link rel="stylesheet" type="text/css" href="assets/fonts/icomoon/icomoon.css">
+
     <!-- AnimatedSVGIcons -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/animatedsvgicons/css/codropsicons.css">
 
-    <!-- Iconsweets CSS -->
-    
-
-    <!-- Octicons CSS -->
-    
-
-    <!-- Stateface CSS -->
-    
-
-    <!-- FullCalendar -->
-    
-
-    <!-- Magnific popup -->
     <link rel="stylesheet" type="text/css" href="assets/js/plugins/magnific/magnific-popup.css">
 
     <!-- c3charts -->
     <link rel="stylesheet" type="text/css" href="assets/js/plugins/c3charts/c3.min.css">
-
-    <!-- Highlight.js CSS -->
-    
-    
-
-    <!-- Ladda CSS -->
-    
-
-    <!-- Zocial CSS -->
-    
-
-    <!-- Slick CSS -->
-    
-
-    <!-- Dropzone CSS -->
-    
-
-    <!-- Nestable CSS -->
-    
-
-    <!-- Datatables CSS -->
-    
-    
-    
-
-    <!-- Fancytree CSS -->
-    
-
-    <!-- X-edit CSS -->
-    
-    
-    
-
-    <!-- FooTable CSS -->
-    
-
-    <!-- Summernote -->
-    
-
-    <!-- Stateface CSS -->
-    
-
-    <!-- Daterange CSS -->
-    
-
-    <!-- Tagmanager CSS -->
-    
-
-    <!-- Datetimepicker CSS -->
-    
-
-    <!-- Colorpicker CSS -->
-    
-
-    <!-- select2 CSS -->
-    
 
 
     <!-- CSS - allcp forms -->
@@ -105,7 +36,7 @@
 
     <!-- CSS - theme -->
     <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/less/theme.css">
-    
+
     <!-- IE8 HTML5 support -->
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -127,12 +58,12 @@
 	$r1=mysql_query($q1);
 	$row=mysql_fetch_array($r1);
     $name=$row['vname'];
-	  
+
 	  ?>
     <!-- Header  -->
     <?php include('header.php'); ?>
     <!-- /Header -->
-     
+
     <!-- Sidebar  -->
     <?php include('sidebar.php'); ?>
     <!-- /Sidebar -->
@@ -205,7 +136,7 @@
         </section>
         <!-- /Content -->
 
-        
+
 
     </section>
     <!-- /Main Wrapper -->
@@ -280,138 +211,12 @@
 <script src="assets/js/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
 <script src="assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
 
-<!-- Datatables JS -->
-
-
-
-
-
-<!-- FooTable JS -->
-
-
-
-<!-- Validate JS -->
-
-
-
-<!-- BS Dual Listbox JS -->
-
-
-<!-- Bootstrap Maxlength JS -->
-
-
-<!-- Select2 JS -->
-
-
-<!-- Typeahead JS -->
-
-
-<!-- TagManager JS -->
-
-
-<!-- DateRange JS -->
-
-
-<!-- BS Colorpicker JS -->
-
-
-<!-- MaskedInput JS -->
-
-
-<!-- Slick Slider JS -->
-
-
-<!-- MarkDown JS -->
-
-
-
-
-<!-- X-edit CSS -->
-
-
-
-
-
-
-<!-- Dropzone JS -->
-
-
-<!-- Cropper JS -->
-
-
-<!-- Zoom JS -->
-
-
-<!-- Nestable JS -->
-
-
-<!-- PNotify JS -->
-
-
-<!-- Fancytree JSs -->
-
-
-
-
-
-
-
-<!-- Ladda JS -->
-
-
-<!-- NProgress JS -->
-
-
-<!-- Countdown JS -->
-
-
-
-<!-- CanvasBG JS -->
-
-
 <!-- Theme Scripts -->
 <script src="assets/js/utility/utility.js"></script>
 <script src="assets/js/demo/demo.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/demo/widgets_sidebar.js"></script>
-
-
-
-
-
 <script src="assets/js/pages/dashboard1.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="assets/js/demo/widgets.js"></script>
 
 
@@ -423,5 +228,3 @@
 
 
 </html>
-
-
