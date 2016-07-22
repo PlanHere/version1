@@ -1,0 +1,1 @@
+[03-Jul-2016 20:18:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/plana27e/public_html/final/vendor_hotelbe.php:43) in /home/plana27e/public_html/final/vendor_hotelbe.php on line 58
