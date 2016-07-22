@@ -812,7 +812,7 @@
 <?php
 include 'connection.php';
         $q1="SELECT * FROM hotel_data ORDER BY RAND() LIMIT 8";
-        
+
         $result=mysql_query($q1);
         $count=mysql_num_rows($result);
                   while ($row=mysql_fetch_array($result)) {
@@ -849,14 +849,14 @@ include 'connection.php';
 
     </div><!-- End container -->
     <div class='row'>
-<?php 
+<?php
 $q1="select * from hotel_data";
  $r1=mysql_query($q1);
  $cou=mysql_num_rows($r1);
  ?>
       <p class="text-center nopadding">
         <a href="admink/index.html" class="btn_1 medium"><i class="icon-eye-7"></i>View all (<?php echo $cou ?>) </a>
-		
+
     </p></div>
 	<br/>
     <div class="white_bg">

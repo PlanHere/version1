@@ -33,15 +33,15 @@ $international=$_POST['intcus'];
 $indian=$_POST['indcus'];
 $specials=$_POST['spl'];
 $facilities=$_POST['fac'];
-if (isset($_POST['logo'])) {
+  if (isset($_FILES['logo'])) {
 	$file = $_FILES['logo']['tmp_name'];
 	$logo = addslashes(file_get_contents($_FILES['logo']['tmp_name']));
 	$logo_name = addslashes($_FILES['logo']['name']);
 
-	move_uploaded_file($_FILES["logo"]["tmp_name"],"../logos/"."$name".$_FILES["logo"]["name"]);
+	move_uploaded_file($_FILES["logo"]["tmp_name"],"logos/"."$name".$_FILES["logo"]["name"]);
 	$name.$_FILES['logo']['name'];
 	$plocation = "../logos/"."$name".$_FILES["logo"]["name"];
-$loq="update vendor_login set `logo`= '$plocation' where `username`= '$username'";
+  $loq="update vendor_login set `logo`= '$plocation' where `username`= '$username'";
 	$lool=mysql_query($loq);
 }
 
@@ -80,5 +80,4 @@ else {
     </div>";
   header( "refresh:1;url=updatepage.php" );
 }
-//header("Location:./admin/index.php");
 ?>
