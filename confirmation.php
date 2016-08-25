@@ -10,7 +10,7 @@
     <meta name="description" content="Our Plan, Your Joy.Table reservation app,custom search for any restaurant,marriage is made easier">
     <meta name="author" content="Plan Here">
     <title>Booking Confirmation | Plan Here</title>
-    
+
     <!-- Favicons-->
    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
@@ -32,15 +32,15 @@
 
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
-    
+
     <!-- Radio and check inputs -->
     <link href="css/skins/square/grey.css" rel="stylesheet">
-	
+
     <!-- Google web fonts -->
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-        
+
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -48,7 +48,7 @@
      <?php
         include('./head_fun.php');
     ?>
-        
+
 </head>
 <body>
 
@@ -75,35 +75,62 @@
         include('./header.php');
     ?>
     <!-- End Header -->
+    <?php
+    $mail = $_POST['email'];
 
-    
+    $to = $_POST['hotel_mail'];	/*YOUR EMAIL HERE*/
+    $subject = "Request From PlanHere";
+    $headers = "From: PlanHere <noreply@planhere.in>";
+    $message = "BOOKING for HOTEL $name1\n";
+    $message .= "\nDate: " . $_POST['date'];
+    $message .= "\nTime: " . $_POST['time'];
+    $message .= "\nAdults: " . $_POST['adults'];
+    $message .= "\nChildren: " . $_POST['children'];
+    $message .= "\nName: " . $_POST['firstname'];
+    $message .= "\nLast name: " . $_POST['lastname'];
+    $message .= "\nEmail: " . $_POST['email'];
+    $message .= "\nTelephone: " . $_POST['telephone'];
+
+    //Receive Variable
+    $sentOk = mail($to,$subject,$message,$headers);
+
+    //Confirmation page
+    $user = "$mail";
+    $usersubject = "Thank You - Booking summary from PlanHere";
+    $userheaders = "From: info@planhere.in\n";
+    //Confirmation page WITH  SUMMARY
+    $usermessage = "Thank you for your time, request successfully sent!.\nWe will contact you shortly to confirm your request!\n\n$message";
+    mail($user,$usersubject,$usermessage,$userheaders);
+    ?>
+    <!-- END SEND MAIL SCRIPT -->
+
     <section id="hero_2">
 	<div class="intro_title animated fadeInDown">
            <h1>Place your order</h1>
             <div class="bs-wizard">
-  			
+
                 <div class="col-xs-4 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum">Your cart</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="./cart.php" class="bs-wizard-dot"></a>
                 </div>
-                               
+
                 <div class="col-xs-4 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum">Your details</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="./payment.php" class="bs-wizard-dot"></a>
                 </div>
-            
+
               <div class="col-xs-4 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum">Finish!</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
-                </div>  
-                   
-		</div>  <!-- End bs-wizard --> 
-    </div>   <!-- End intro-title --> 
+                </div>
+
+		</div>  <!-- End bs-wizard -->
+    </div>   <!-- End intro-title -->
 </section><!-- End Section hero_2 -->
-    
+
     <div id="position">
     	<div class="container">
                 	<ul>
@@ -113,28 +140,22 @@
                     </ul>
         </div>
     </div><!-- End position -->
-    
+
     <div class="container margin_60">
 	<div class="row">
 		<div class="col-md-8">
-        
+
 			<div class="form_title">
 				<h3><strong><i class="icon-ok"></i></strong>Thank you!</h3>
-				<p>
-					Mussum ipsum cacilds, vidis litro abertis.
-				</p>
 			</div>
 			<div class="step">
-				<p>
-					Lorem ipsum dolor sit amet, nostrud nominati vis ex, essent conceptam eam ad. Cu etiam comprehensam nec. Cibo delicata mei an, eum porro legere no. Te usu decore omnium, quem brute vis at, ius esse officiis legendos cu. Dicunt voluptatum at cum. Vel et facete equidem deterruisset, mei graeco cetero labores et. Accusamus inciderint eu mea.
-				</p>
+
+					<h1>Your Order is placed Succesfully!!!</h1><br><h4>We'll let you know the Status through mail and mobile.</h4>
+
 			</div><!--End step -->
-            
+
 			<div class="form_title">
 				<h3><strong><i class="icon-tag-1"></i></strong>Booking summary</h3>
-				<p>
-					Mussum ipsum cacilds, vidis litro abertis.
-				</p>
 			</div>
 			<div class="step">
 				<table class="table confirm">
@@ -148,10 +169,19 @@
 				<tbody>
 				<tr>
 					<td>
-						<strong>Louvre musuem tickets</strong>
+            <?php
+              $id=$_POST['id'];
+              include 'connection.php';
+              $q="select * from hotel_data where id=$id";
+              $r=mysql_query($q);
+              $row=mysql_fetch_array($r);
+              $name=$row['name'];
+              $price=$row['price'];
+            ?>
+						<strong>Hotel Name</strong>
 					</td>
 					<td>
-						2x
+						<strong><?=$name;?>&nbsp;(</strong> <?php echo $_POST['adults']." Adults &  ".$_POST['children']." Children )"; ?>
 					</td>
 				</tr>
 				<tr>
@@ -159,81 +189,47 @@
 						<strong>Date</strong>
 					</td>
 					<td>
-						25 Febraury 2015
+						<?=$_POST['date'];?>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<strong>To</strong>
+						<strong>Time</strong>
 					</td>
 					<td>
-						Jhon Doe
+						<?=$_POST['time'];?>
+					</td>
+				</tr
+        <tr>
+					<td>
+						<strong>Amount</strong>
+					</td>
+					<td>
+						<?=$price;?>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<strong>Payment type</strong>
+						<strong>Payment By</strong>
 					</td>
 					<td>
-						Credit card
+						<?=$_POST['name_book'];?>
 					</td>
 				</tr>
 				</tbody>
 				</table>
-				<table class="table confirm">
-				<thead>
-				<tr>
-					<th colspan="2">
-						Item 2
-					</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>
-						<strong>Senna river tour</strong>
-					</td>
-					<td>
-						2x
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>Date</strong>
-					</td>
-					<td>
-						27 Febraury 2015
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>To</strong>
-					</td>
-					<td>
-						Jhon Doe
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<strong>Payment type</strong>
-					</td>
-					<td>
-						Credit card
-					</td>
-				</tr>
-				</tbody>
-				</table>
+
 			</div><!--End step -->
 		</div><!--End col-md-8 -->
-        
+
 		<aside class="col-md-4">
 		<div class="box_style_1">
 			<h3 class="inner">Thank you!</h3>
 			<p>
-				Nihil inimicus ex nam, in ipsum dignissim duo. Tale principes interpretaris vim ei, has posidonium definitiones ut. Duis harum fuisset ut his, duo an dolor epicuri appareat.
+			We will process your order and get back to you soon,Please be patient<br>We'll inform you the status through mail and registred mobile number.
 			</p>
 			<hr>
-			<a class="btn_full_outline" href="invoice.php" target="_blank">View your invoice</a>
+			<a class="btn_full_outline" href="invoice.php" target="_blank" disabled>Waiting for Confirmation....</a>
 		</div>
 		 <div class="box_style_4">
 				<i class="icon_set_1_icon-57"></i>
@@ -242,13 +238,13 @@
 				<small>Monday to Sunday <br>9.00am to 9.00pm</small>
 			</div>
 		</aside>
-        
+
 	</div><!--End row -->
 </div><!--End container -->
 
 <!--Footer Start-->
         <?php
-           include('./footer.php'); 
+           include('./footer.php');
         ?>
 	    <!-- End footer -->
 
@@ -262,7 +258,7 @@
 <script src="js/functions.js"></script>
 
 <script src="js/icheck.js"></script>
-<script>  
+<script>
 $('input').iCheck({
    checkboxClass: 'icheckbox_square-grey',
    radioClass: 'iradio_square-grey'

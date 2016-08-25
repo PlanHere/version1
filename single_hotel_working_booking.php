@@ -9,6 +9,7 @@ if($r){
 		$name=$row['name'];
 		$city=$row['city'];
 		$phone=$row['phone'];
+		$desc=$row['planhere_desc'];
 		$website=$row['website'];
 		$about=$row['about'];
 		$area=$row['area'];
@@ -305,24 +306,7 @@ if($r){
                                 <li>No scripta electram necessitatibus sit</li>
                             </ul>
                         </div>
-                    </div><!-- End row  -->
-                </div><!-- End col-md-9  -->
-            </div><!-- End row  -->
-
-          	<hr>
-
-            <div class="row">
-                <div class="col-md-3">
-                    <h3>Plan Here Description</h3>
-                </div>
-                <div class="col-md-9">
-
-                    <p>
-                      //make a new column in the database initialy its value shoud be 0 so write a if condition if zero "-" or the matter should be displayed
-											</p>
-
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
+												<div class="col-md-6 col-sm-6">
                             <ul class="list_icons">
                                 <li><i class="icon_set_1_icon-86"></i> Free wifi</li>
                                 <li><i class="icon_set_2_icon-116"></i> Plasma Tv</li>
@@ -337,20 +321,21 @@ if($r){
                             </ul>
                         </div>
                     </div><!-- End row  -->
-                     <div class="carousel magnific-gallery">
-                     	<div class="item">
-                        	<a href="img/carousel/1.jpg"><img src="img/carousel/1.jpg" alt="Image"></a>
-                        </div>
-                        <div class="item">
-                        	<a href="img/carousel/2.jpg"><img src="img/carousel/2.jpg" alt="Image"></a>
-                        </div>
-                        <div class="item">
-                        	<a href="img/carousel/3.jpg"><img src="img/carousel/3.jpg" alt="Image"></a>
-                        </div>
-                        <div class="item">
-                        	<a href="img/carousel/4.jpg"><img src="img/carousel/4.jpg" alt="Image"></a>
-                        </div>
-                     </div><!-- End photo carousel  -->
+                </div><!-- End col-md-9  -->
+            </div><!-- End row  -->
+
+          	<hr>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Plan Here Description</h3>
+                </div>
+                <div class="col-md-9">
+
+										<div class="row">
+												<?php echo $desc;?>
+                    </div><!-- End row  -->
+
 
 
                 </div><!-- End col-md-9  -->
@@ -364,7 +349,7 @@ if($r){
 								<div class="col-md-9">
 
 										<p>
-										<!-	make a new column in the database initialy its value shoud be 0 so write a if condition if zero "-" or the matter should be displayed -->
+										<!--	make a new column in the database initialy its value shoud be 0 so write a if condition if zero "-" or the matter should be displayed -->
 											</p>
 										 <div class="carousel magnific-gallery">
 											<div class="item">
@@ -469,61 +454,40 @@ if($r){
         <?php
 				if (!count($_POST)){
 			?>
-        <form id="booking_hotel" action="<?php echo $_server['php_self']; ?>" method="post" disabled>
+        <form id="booking_hotel" action="confirm.php" method="post">
             <h3 class="inner">Book A Table</h3>
-						<h4>Booked By : </h4>
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <label><i class="icon-calendar-7"></i> Name</label>
-                        <input class="date-pick form-control required" data-date-format="M d, D" type="text" name="check_in_hotel" id="check_in_hotel">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                     <div class="form-group">
-                        <label><i class="icon-calendar-7"></i> Email id</label>
-                        <input class="date-pick form-control required" data-date-format="M d, D" type="text" name="check_out_hotel" id="check_out_hotel">
-                    </div>
-                </div>
-								<div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <label><i class="icon-calendar-7"></i> Phone Number</label>
-                        <input class="date-pick form-control required" data-date-format="M d, D" type="text" name="check_in_hotel" id="check_in_hotel">
-                    </div>
-                </div>
-            </div>
 
-                 <hr>
 								 <h4>Booking For : </h4>
                 <div class="row">
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Name</label>
-							<input class="form-control required" name="name_hotel_booking" id="name_hotel_booking" type="text">
+							<input class="form-control required" name="first_name" id="name_hotel_booking" type="text">
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Last name</label>
-							<input class="form-control required" name="last_hotel_name_booking" id="last_hotel_name_booking" type="text">
+							<input class="form-control required" name="last_name" id="last_hotel_name_booking" type="text">
 						</div>
 					</div>
 				</div>
 
 				<div class="form-group" style="position:relative">
 					<label>Email</label>
-					<input class="form-control required" type="email" name="email_hotel_booking" id="email_hotel_booking">
+					<input class="form-control required" type="email" name="email" id="email_hotel_booking">
 				</div>
+
 				<div class="form-group" style="position:relative">
 					<label>Telephone</label>
-					<input class="form-control required" type="text" name="phone_hotel_booking" id="phone_hotel_booking">
+					<input class="form-control required" type="tel" name="phone" id="phone_hotel_booking">
 				</div>
 				<div class="row">
 						<div class="col-md-6 col-sm-6">
 								<div class="form-group">
 										<label>Adults</label>
 										<div class="numbers-row">
-												<input type="text" value="1" id="adults_hotel" class="qty2 form-control required" name="adults_hotel">
+												<input type="text" value="1" id="adults_hotel" class="qty2 form-control required" name="adults">
 										</div>
 								</div>
 						</div>
@@ -531,27 +495,27 @@ if($r){
 								<div class="form-group">
 										<label>Children</label>
 										<div class="numbers-row">
-												<input type="text" value="0" id="children_hotels" class="qty2 form-control required" name="children_hotels">
+												<input type="text" value="0" id="children_hotels" class="qty2 form-control required" name="children">
 										</div>
 								</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
 								<div class="form-group">
-										<label><i class="icon-calendar-7"></i> Date</label>
-										<input class="date-pick form-control required" data-date-format="M d, D" type="text" name="check_in_hotel" id="check_in_hotel">
+										<label><i class="icon-calendar-7"></i>Date</label>
+										<input class="date-pick form-control required" data-date-format="M d, D" type="text" name="date" id="check_in_hotel">
 								</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
 								 <div class="form-group">
-										<label><i class="icon-calendar-7"></i> Time</label> <!- SET time datatype->
-										<input class="date-pick form-control required" data-date-format="M d, D" type="text" name="check_out_hotel" id="check_out_hotel">
+										<label><i class="icon-calendar-7"></i> Time</label> <!-- SET time datatype-->
+										<input class="time-pick form-control required" data-time-format="H:M:S" type="text" name="time" id="check_out_hotel">
 								</div>
 						</div>
 						<p>Once the time is set it is valid for 30 minutes after the time and 10 minutes before the time  </p>
 						</div>
             <br>
-
-            <button type="submit" class="btn_full" disabled="">Book now(Comming Soon)</button>
+						<input type="hidden" value="<?=$_GET['id']?>" name="id" />
+            <button type="submit" class="btn_full">Book now</button>
 
             <a class="btn_full_outline" href="#"><i class=" icon-heart"></i> Add to whislist</a>
             </form>
@@ -564,35 +528,7 @@ if($r){
 		<p><strong>Request Successfully Sent!</strong><br />
 		  We will contact you shortly to confirm your request!</p>
 		</div>
-						<?php
-						$mail = $_POST['email_hotel_booking'];
 
-						$to = "test@doamin.com";	/*YOUR EMAIL HERE*/
-						$subject = "Request From CityTours";
-						$headers = "From: CityTours <noreply@yourdomain.com>";
-						$message = "BOOKING for HOTEL Concordia Paris\n";
-						$message .= "\nCheck in: " . $_POST['check_in_hotel'];
-						$message .= "\nCheck out: " . $_POST['check_out_hotel'];
-						$message .= "\nAdults: " . $_POST['adults_hotel'];
-						$message .= "\nChildren: " . $_POST['children_hotels'];
-						$message .= "\nName: " . $_POST['name_hotel_booking'];
-						$message .= "\nLast name: " . $_POST['last_hotel_name_booking'];
-						$message .= "\nEmail: " . $_POST['email_hotel_booking'];
-						$message .= "\nTelephone: " . $_POST['phone_hotel_booking'];
-
-						//Receive Variable
-						$sentOk = mail($to,$subject,$message,$headers);
-
-						//Confirmation page
-						$user = "$mail";
-						$usersubject = "Thank You - Booking summary from CityTours";
-						$userheaders = "From: info@citytours.com\n";
-						//Confirmation page WITH  SUMMARY
-						$usermessage = "Thank you for your time, request successfully sent!.\nWe will contact you shortly to confirm your request!\n\n$message";
-						mail($user,$usersubject,$usermessage,$userheaders);
-						}
-						?>
-		<!-- END SEND MAIL SCRIPT -->
         </div><!--/box_style_1 -->
 
         <div class="box_style_4">
@@ -713,9 +649,11 @@ $('input').iCheck({
 </script>
 <!-- Date and time pickers -->
 <script src="js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-timepicker.js"></script>
 <script>
    $("#booking_hotel").validate();
   $('input.date-pick').datepicker();
+	$('input.time-pick').timepicker();
 </script>
  <!-- Map -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
