@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 require ('connection.php');
 //include 'image.php';
 if(!empty($_POST['username']) && !empty($_POST['emailid']) && !empty($_POST['password']) && !empty($_POST['phno']))
@@ -23,7 +23,7 @@ if(isset($_REQUEST['submit']))
 						{
 
 							$file = $_FILES['logo']['tmp_name'];
-							$logo = addslashes(file_POST_contents($_FILES['logo']['tmp_name']));
+							$logo = addslashes(file_get_contents($_FILES['logo']['tmp_name']));
 							$logo_name = addslashes($_FILES['logo']['name']);
 
 							move_uploaded_file($_FILES["logo"]["tmp_name"],"logos/"."$name".$_FILES["logo"]["name"]);

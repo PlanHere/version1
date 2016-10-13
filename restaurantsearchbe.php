@@ -10,30 +10,30 @@
     <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
     <meta name="author" content="Plan Here">
     <title>Hotels List | Plan Here</title>
-    
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-    
+
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
-    
+
     <!-- Radio and check inputs -->
     <link href="css/skins/square/grey.css" rel="stylesheet">
-    
+
      <!-- Google web fonts -->
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-    
+
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-        
+
 </head>
 <body>
 
@@ -76,7 +76,7 @@
                     </ul>
         </div>
     </div><!-- Position -->
-    
+
 <div class="collapse" id="collapseMap">
 	<div id="map" class="map"></div>
 </div><!-- End Map -->
@@ -118,7 +118,7 @@
 						<li><label><input type="checkbox" name="meal[]" value="lunch">Lunch</label></li>
 						<li><label><input type="checkbox" name="meal[]" value="dinner">Dinner</label></li>
 						<li><label><input type="checkbox" name="meal[]" value="midnight">Midnight</label></li>
-                        
+
 					</ul>
 				</div>
 				<div class="filter_type">
@@ -141,7 +141,7 @@
 						<li><label><input type="checkbox" name="indcusine[]" value="rajasthani">Rajasthani</label></li>
 						<li><label><input type="checkbox" name="indcusine[]" value="sindhi">Sindhi</label></li>
 						<li><label><input type="checkbox" name="indcusine[]" value="andra">Andhra</label></li>
-						
+
 					</ul>
 				</div>
 				<div class="filter_type">
@@ -151,8 +151,8 @@
 						<li><label><input type="checkbox" name="spl[]" value="desserts">Desserts</label></li>
 						<li><label><input type="checkbox" name="spl[]" value="juices">Juices</label></li>
 						<li><label><input type="checkbox" name="spl[]" value="streetfood">Street Food</label></li>
-						
-						
+
+
 					</ul>
 				</div>
 				<div class="filter_type">
@@ -166,7 +166,7 @@
 						<li><label><input type="checkbox" name="facilities[]" value="valetparking">Valet Parking</label></li>
 						<li><label><input type="checkbox" name="facilities[]" value="alcohol">Alcohol</label></li>
 						<li><label><input type="checkbox" name="facilities[]" value="lodging">Lodging</label></li>
-                        
+
 					</ul>
 				</div>
 				<div class="filter_type">
@@ -200,7 +200,7 @@
 				<div class="filter_type">
 				<input type="submit" value="Filter"/>
 				</div>
-				
+
 			</div><!--End collapse -->
 		</div><!--End filters col-->
 	</form>
@@ -211,9 +211,9 @@
 			<small>Monday to Sunday<br>9am - 9pm</small>
 		</div>
 		</aside><!--End aside -->
-        
+
 		<div class="col-lg-9 col-md-8">
-        
+
 			<div id="tools">
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-6">
@@ -239,14 +239,14 @@
 					</div>
 				</div>
 			</div><!--End tools -->
-            
+
 			<div class="row">
 				<br /><br /><br /><?php
 include 'connection.php';
-error_reporting(0);
+//error_reporting(0);
 $name=$_POST['hotelname'];
 $cat=$_POST['category'];
-$q="select DISTINCT id,* from hotel_data hd,v_hotel v where hd.name LIKE '%$name%' OR v.meal LIKE '%$cat%'";
+$q="SELECT * from vendor_login,hotel_data hd,v_hotel WHERE hd.id=(select DISTINCT id from hotel_data hd,v_hotel v where hd.name LIKE '%$name%' OR v.meal LIKE '%$cat%')";
 $r=mysql_query($q);
 $count=mysql_num_rows($r);
 if($r){
@@ -255,12 +255,12 @@ if($r){
 		$name=$row1['name'];
 		$rating=$row1['rating'];
 		$price=$row1['price'];?>
-							
+
 								<div class="col-md-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
 							<div class="hotel_container">
 								<div class="img_container">
 									<a href="single_hotel.html">
-									<img src="img/hotel_1.jpg" width="800" height="533" class="img-responsive" alt="">
+									<img src="<?php echo $row1['logo']?>" width="800" height="533" class="img-responsive" alt="">
 									<div class="ribbon top_rated"></div>
 		                            <div id="score"><span><?php echo $rating; ?></span>Good</div>
 									<div class="short_info hotel">
@@ -283,7 +283,7 @@ if($r){
 	</div><!-- End row -->
 </div><!-- End container -->
 <!--footer -->
-<?php include 'footer.php'; ?>    
+<?php include 'footer.php'; ?>
 <!-- End footer -->
 
 <div id="toTop"></div><!-- Back to top button -->
@@ -296,7 +296,7 @@ if($r){
 <!-- Specific scripts -->
 <!-- Check and radio inputs -->
 <script src="js/icheck.js"></script>
-<script>  
+<script>
 $('input').iCheck({
    checkboxClass: 'icheckbox_square-grey',
    radioClass: 'iradio_square-grey'

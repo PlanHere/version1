@@ -40,14 +40,18 @@
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
+   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
         <?php
         include('./head_fun.php');
-    ?>
+        include('way2sms-api.php');
+        $otp=intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
+        $msg="$otp is your One Time Password for Booking Confirmation @ PlanHere.in - Thanks & Regards<br>Team PlanHere.";
+        sendWay2SMS ( '9000504436' , 'vinod' , $_POST['telephone'] ,$msg);
+        ?>
 </head>
 <body>
 
@@ -113,6 +117,8 @@
                     </ul>
         </div>
     </div><!-- End position -->
+<form class="form-control" action="Confirmation.php" method="post">
+
 
 <div class="container margin_60">
 	<div class="row">
@@ -125,13 +131,13 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>First name</label>
-							<input type="text" class="form-control" id="firstname_booking" name="firstname" value="<?=$_POST['first_name'];?>" readonly>
+							<input type="text" class="form-control" id="firstname_booking" name="firstname" value="<?=$_POST['first_name'];?>">
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Last name</label>
-							<input readonly type="text" class="form-control" id="lastname_booking" name="lastname" value="<?=$_POST['last_name'];?>">
+							<input  type="text" class="form-control" id="lastname_booking" name="lastname" value="<?=$_POST['last_name'];?>">
 						</div>
 					</div>
 				</div>
@@ -139,13 +145,13 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" readonly id="email_booking" name="email" class="form-control" value="<?=$_POST['email'];?>">
+							<input type="email"  id="email_booking" name="email" class="form-control" value="<?=$_POST['email'];?>">
 						</div>
 					</div>
           <div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Telephone</label>
-							<input type="text" readonly id="telephone_booking" name="telephone" class="form-control" value="<?=$_POST['phone'];?>">
+							<input type="text"  id="telephone_booking" name="telephone" class="form-control" value="<?=$_POST['phone'];?>">
 						</div>
 					</div>
 				</div>
@@ -158,14 +164,16 @@
 			<div class="step">
 				<div class="form-group">
 					<label>Payee Name</label>
-					<input type="text"  class="form-control" id="name_card_bookign" name="name_bookign">
+          <input type="hidden" name="date" value="<?=$_POST['date'];?>">
+          <input type="hidden" name="time" value="<?=$_POST['time'];?>">
+					<input type="text"  class="form-control" id="name_card_bookign" name="name_book">
 				</div>
 				<div class="row">
           <div class="col-md-6 col-sm-6">
               <div class="form-group">
                   <label>Adults</label>
                   <div class="numbers-row">
-                      <input readonly type="text" max='2' id="adults_hotel" class="qty2 form-control required" name="adults" value="<?php echo $_POST['adults'];?>">
+                      <input  type="text" max='2' id="adults_hotel" class="qty2 form-control required" name="adults" value="<?php echo $_POST['adults'];?>">
                   </div>
               </div>
           </div>
@@ -173,27 +181,21 @@
               <div class="form-group">
                   <label>Children</label>
                   <div class="numbers-row">
-                      <input readonly type="text" max='2' id="children_hotels" class="qty2 form-control required" name="children" value="<?php echo $_POST['children'];?>">
+                      <input  type="text" max='2' id="children_hotels" class="qty2 form-control required" name="children" value="<?php echo $_POST['children'];?>">
                   </div>
               </div>
           </div>
 				</div>
 				<div class="row">
-          <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                  <label>No Of Rooms</label>
-                  <div class="numbers-row">
-                      <input readonly type="text" value="<?php echo ceil($_POST['adults']/2);?>" min="<?php echo ceil($_POST['adults']/2);?>" id="no_of_rooms" class="qty2 form-control required" name="rooms">
-                  </div>
-              </div>
-          </div>
+
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>Security code</label>
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
-										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP">
+										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP" onkeyup="checkname();">
+                    <div id="#name_status"></div>
 									</div>
 								</div>
 							</div>
@@ -201,19 +203,29 @@
 					</div>
           <div class="col-md-6">
 						<div class="form-group">
-							<label>Security code</label>
+							<label>Amount</label>
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
                     <?php
                     include 'connection.php';
                     $id=$_POST['id'];
-                        $q="select * from hotel_data where id=$id";
+                    if (mysql_query("SELECT otp FROM otpdata WHERE uid=$id")) {
+                      mysql_query("update otpdata set otp=$otp where uid=$id");
+                    }
+                    else {
+                      mysql_query("insert into `otpdata`(`uid`,`otp`) VALUES ($id,$otp)");
+                    }
+                        $q="select * from hotel_data x,vendor_login y where x.id=$id AND y.id=$id";
                         $r=mysql_query($q);
                         $row=mysql_fetch_array($r);
                         $price=$row['price'];
+                        $hotel_mail=$row['email'];
+                        $name1=$row['vname'];
                     ?>
-										<input readonly type="text" name="amount" value="<?php echo $price*ceil($_POST['adults']/2);?>" class="form-control">
+                    <input type="hidden" name="id" value="<?=$id;?>">
+                    <input type="hidden" name="hotel_mail" value="<?=$hotel_mail;?>">
+										<input  type="text" name="amount" value="<?php echo $price;?>" class="form-control" readonly>
 									</div>
 								</div>
 							</div>
@@ -226,10 +238,47 @@
 				<div class="form-group">
 					<label><input type="checkbox" name="policy_terms" id="policy_terms">I accept terms and conditions and general policy.</label>
 				</div>
-				<a href="confirmation.php" class="btn_1 green medium">Book now</a>
+				<input type="submit" class="btn_1 green medium" name="submit" value="Book Now"/>
 			</div>
 		</div>
+<script>
+$('input[type=submit]').click(function(e){
+if($("#otp").val() != "<?php=$otp;?>")
+{
+alert("Verify your OTP");
+return false;
+}
+});
+function checkname()
+{
+  var otp=document.getElementById( "otp" ).value;
+  if(otp)
+  {
+      $.ajax({
+      type: 'post',
+      url: 'checkdata.php',
+      data: {otp},
+      success: function (response) {
+        $( '#name_status' ).html(response);
+        if(response=="OTP Verified Successfully")
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+    });
+  }
+  else
+  {
+    $( '#name_status' ).html("");
+    return false;
+  }
+}
 
+</script>
 		<aside class="col-md-4">
 		<div class="box_style_1">
 			<h3 class="inner">- Summary -</h3>
