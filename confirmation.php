@@ -73,6 +73,17 @@
     <!-- Header================================================== -->
     <?php
         include('./header.php');
+        $id=$_POST['id'];
+        include 'connection.php';
+        $q="select * from hotel_data where id=$id";
+        $q2="select * from vendor_login where id=$id";
+        $r=mysql_query($q);
+        $r2=mysql_query($q2);
+        $row=mysql_fetch_array($r);
+        $row1=mysql_fetch_array($r2);
+        $name=$row['name'];
+        $price=$row['price'];
+        $phone=$row1['phone'];
     ?>
     <!-- End Header -->
     <?php
@@ -81,7 +92,7 @@
     $to = $_POST['hotel_mail'];	/*YOUR EMAIL HERE*/
     $subject = "Request From PlanHere";
     $headers = "From: PlanHere <noreply@planhere.in>";
-    $message = "BOOKING for HOTEL $name1\n";
+    $message = "BOOKING for HOTEL $name\n";
     $message .= "\nDate: " . $_POST['date'];
     $message .= "\nTime: " . $_POST['time'];
     $message .= "\nAdults: " . $_POST['adults'];
@@ -99,8 +110,11 @@
     $usersubject = "Thank You - Booking summary from PlanHere";
     $userheaders = "From: info@planhere.in\n";
     //Confirmation page WITH  SUMMARY
-    $usermessage = "Thank you for your time, request successfully sent!.\nWe will contact you shortly to confirm your request!\n\n$message";
+    $usermessage = "Thank you for your time, request successfully sent!.\nWe will contact you shortly to confirm your request!";
     mail($user,$usersubject,$usermessage,$userheaders);
+    include('way2sms-api.php');
+    //sendWay2SMS ( '9000504436' , 'vinod' , $_POST['telephone'] ,$usermessage);
+
     ?>
     <!-- END SEND MAIL SCRIPT -->
 
@@ -170,13 +184,8 @@
 				<tr>
 					<td>
             <?php
-              $id=$_POST['id'];
-              include 'connection.php';
-              $q="select * from hotel_data where id=$id";
-              $r=mysql_query($q);
-              $row=mysql_fetch_array($r);
-              $name=$row['name'];
-              $price=$row['price'];
+             $message="Mr/Mrs ".$_POST['firstname'].$_POST['lastname']." is requested for a table for". $_POST['adults']."+".$_POST['children']." Seats on ".$_POST['date']." at ".$_POST['time']." open your account and accept if available";
+            //  sendWay2SMS ( '9000504436' , 'vinod' , $phone ,$message);
             ?>
 						<strong>Hotel Name</strong>
 					</td>
@@ -227,6 +236,27 @@
 			<h3 class="inner">Thank you!</h3>
 			<p>
 			We will process your order and get back to you soon,Please be patient<br>We'll inform you the status through mail and registred mobile number.
+      <?php
+
+        $fname=$_POST['firstname'];
+        $lname=$_POST['lastname'];
+        $custname=$fname.$lname;
+        $date=$_POST['date'];
+        $time=$_POST['time'];
+        $nop=$_POST['adults']."+".$_POST['children'];
+        $booking="PH".rand(100,1000);
+        if(mysql_query("select * from bookings where uid=$id AND hid=$id")){
+          echo "<h1>Only one Booking pre day per hotel is allowed</h1>.";
+          header( "refresh:5;url=index.php" );
+        }
+        else{
+          $q12="INSERT INTO `bookings`(`uid`, `hid`, `username`,`date`, `no_of_presons`, `booking_id`, `status`) VALUES ($id,$id,'$custname','$date','$nop','$booking',0)";
+          mysql_query($q12);
+          echo '<script type="text/javascript">alert("Booking Successful your booking id is '.$booking.'")';
+          header( "refresh:5;url=index.php" );
+        }
+
+      ?>
 			</p>
 			<hr>
 			<a class="btn_full_outline" href="invoice.php" target="_blank" disabled>Waiting for Confirmation....</a>

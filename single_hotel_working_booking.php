@@ -514,7 +514,7 @@ if($r){
 						<p>Once the time is set it is valid for 30 minutes after the time and 10 minutes before the time  </p>
 						</div>
             <br>
-						<input type="hidden" value="<?=$_GET['id']?>" name="id" />
+						<input type="hidden" value="<?=$_GET['id'];?>" name="id" />
             <button type="submit" class="btn_full">Book now</button>
 
             <a class="btn_full_outline" href="#"><i class=" icon-heart"></i> Add to whislist</a>
@@ -528,7 +528,7 @@ if($r){
 		<p><strong>Request Successfully Sent!</strong><br />
 		  We will contact you shortly to confirm your request!</p>
 		</div>
-
+<?php } ?>
         </div><!--/box_style_1 -->
 
         <div class="box_style_4">

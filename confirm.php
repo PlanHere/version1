@@ -40,14 +40,18 @@
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
+   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
         <?php
         include('./head_fun.php');
-    ?>
+        include('way2sms-api.php');
+        $otp=intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
+        $msg="$otp is your One Time Password for Booking Confirmation @ PlanHere.in - Thanks & Regards<br>Team PlanHere.";
+        sendWay2SMS ( '9000504436' , 'vinod' , $_POST['telephone'] ,$msg);
+        ?>
 </head>
 <body>
 
@@ -190,7 +194,8 @@
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
-										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP">
+										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP" onkeyup="checkname();">
+                    <div id="#name_status"></div>
 									</div>
 								</div>
 							</div>
@@ -198,14 +203,20 @@
 					</div>
           <div class="col-md-6">
 						<div class="form-group">
-							<label>Anount</label>
+							<label>Amount</label>
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
                     <?php
                     include 'connection.php';
                     $id=$_POST['id'];
-                        $q="select * from hotel_data,vendor_login where id=$id";
+                    if (mysql_query("SELECT otp FROM otpdata WHERE uid=$id")) {
+                      mysql_query("update otpdata set otp=$otp where uid=$id");
+                    }
+                    else {
+                      mysql_query("insert into `otpdata`(`uid`,`otp`) VALUES ($id,$otp)");
+                    }
+                        $q="select * from hotel_data x,vendor_login y where x.id=$id AND y.id=$id";
                         $r=mysql_query($q);
                         $row=mysql_fetch_array($r);
                         $price=$row['price'];
@@ -214,7 +225,7 @@
                     ?>
                     <input type="hidden" name="id" value="<?=$id;?>">
                     <input type="hidden" name="hotel_mail" value="<?=$hotel_mail;?>">
-										<input  type="text" name="amount" value="<?php echo $price;?>" class="form-control">
+										<input  type="text" name="amount" value="<?php echo $price;?>" class="form-control" readonly>
 									</div>
 								</div>
 							</div>
@@ -230,7 +241,44 @@
 				<input type="submit" class="btn_1 green medium" name="submit" value="Book Now"/>
 			</div>
 		</div>
+<script>
+$('input[type=submit]').click(function(e){
+if($("#otp").val() != "<?php=$otp;?>")
+{
+alert("Verify your OTP");
+return false;
+}
+});
+function checkname()
+{
+  var otp=document.getElementById( "otp" ).value;
+  if(otp)
+  {
+      $.ajax({
+      type: 'post',
+      url: 'checkdata.php',
+      data: {otp},
+      success: function (response) {
+        $( '#name_status' ).html(response);
+        if(response=="OTP Verified Successfully")
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+    });
+  }
+  else
+  {
+    $( '#name_status' ).html("");
+    return false;
+  }
+}
 
+</script>
 		<aside class="col-md-4">
 		<div class="box_style_1">
 			<h3 class="inner">- Summary -</h3>

@@ -9,7 +9,7 @@
 	  ?>
  <header class="navbar navbar-fixed-top ">
         <ul class="nav navbar-nav navbar-left">
-            
+
             <li class="hidden-xs">
                 <div class="navbar-btn btn-group">
                     <button class="btn-hover-effects navbar-fullscreen toggle-active btn si-icons si-icons-default">
@@ -18,7 +18,7 @@
                 </div>
             </li>
         </ul>
-        
+
         <ul class="nav navbar-nav navbar-right">
             <li class="hidden-xs">
                 <div class="navbar-btn btn-group phn">
@@ -50,7 +50,7 @@
                                     <div id="nav-tab1" class="tab-pane active" role="tabpanel">
                                         <ul class="media-list" role="menu">
                                             <li class="media">
-                                                <a class="media-left" href="#"> 
+                                                <a class="media-left" href="#">
                                                     <img src="assets/img/avatars/1.png" class="br3" alt="avatar">
                                                 </a>
 
@@ -63,7 +63,7 @@
                                                 </div>
                                             </li>
                                             <li class="media">
-                                                <a class="media-left" href="#"> 
+                                                <a class="media-left" href="#">
                                                     <img src="assets/img/avatars/2.png" class="br3" alt="avatar">
                                                 </a>
 
@@ -76,7 +76,7 @@
                                                 </div>
                                             </li>
                                             <li class="media">
-                                                <a class="media-left" href="#"> 
+                                                <a class="media-left" href="#">
                                                     <img src="assets/img/avatars/3.png" class="br3" alt="avatar">
                                                 </a>
 
@@ -171,7 +171,7 @@
                                                     <span class="fa fa-envelope"></span>
                                                 </div>
                                                 <div class="timeline-desc">
-                                                    <b>John Doe <span>-</span> <span class="timeline-date">3:16 am</span></b>
+                                                    <b> <span>-</span> <span class="timeline-date">3:16 am</span></b>
                                                     Sent you a message.
                                                     <a href="#">View now</a>
                                                 </div>
@@ -181,7 +181,7 @@
                                                     <span class="fa fa-info-circle"></span>
                                                 </div>
                                                 <div class="timeline-desc">
-                                                    <b>Admin <span>-</span> <span class="timeline-date">6:26 pm</span></b> 
+                                                    <b>Admin <span>-</span> <span class="timeline-date">6:26 pm</span></b>
                                                     Сreated invoice for:
                                                     <a href="#">iPad Air</a>
                                                 </div>
@@ -191,7 +191,7 @@
                                                     <span class="fa fa-info-circle"></span>
                                                 </div>
                                                 <div class="timeline-desc">
-                                                    <b>Admin <span>-</span> <span class="timeline-date">11:45 am</span></b> 
+                                                    <b>Admin <span>-</span> <span class="timeline-date">11:45 am</span></b>
                                                     Сreated invoice for:
                                                     <a href="#">iPhone 5s</a>
                                                 </div>
@@ -208,7 +208,7 @@
                     </div>
                 </div>
             </li>
-            
+
             <li class="dropdown dropdown-fuse navbar-user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img class="btn-hover-effects" src="../<?=$logo?>" alt="avatar">
@@ -257,7 +257,7 @@
                     <li class="list-group-item">
                         <span class="fa fa-cog"></span>
                         <a href="#" class="">
-                            Account Settings 
+                            Account Settings
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -268,7 +268,7 @@
                     </li>
                     <li class="dropdown-footer text-center">
                         <a href="./logout.php" class="btn btn-warning">
-                            logout 
+                            logout
                         </a>
                     </li>
                 </ul>
