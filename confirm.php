@@ -29,7 +29,6 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
-
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
 
@@ -47,10 +46,10 @@
     <![endif]-->
         <?php
         include('./head_fun.php');
-        include('way2sms-api.php');
+        require('way2sms-api.php');
         $otp=intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
         $msg="$otp is your One Time Password for Booking Confirmation @ PlanHere.in - Thanks & Regards<br>Team PlanHere.";
-        sendWay2SMS ( '9000504436' , 'vinod' , $_POST['telephone'] ,$msg);
+        sendWay2SMS ( '8121018090' , '8121018090' , $_POST['phone'] ,$msg);
         ?>
 </head>
 <body>
@@ -151,7 +150,7 @@
           <div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Telephone</label>
-							<input type="text"  id="telephone_booking" name="telephone" class="form-control" value="<?=$_POST['phone'];?>">
+							<input type="text"  id="telephone_booking" name="phone" class="form-control" value="<?=$_POST['phone'];?>">
 						</div>
 					</div>
 				</div>
@@ -194,8 +193,8 @@
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
-										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP" onkeyup="checkname();">
-                    <div id="#name_status"></div>
+										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP">
+                    <button type="button" id="otp_v" name="validate" value="verify">Verify</button>
 									</div>
 								</div>
 							</div>
@@ -238,45 +237,30 @@
 				<div class="form-group">
 					<label><input type="checkbox" name="policy_terms" id="policy_terms">I accept terms and conditions and general policy.</label>
 				</div>
-				<input type="submit" class="btn_1 green medium" name="submit" value="Book Now"/>
+				<input type="submit" id="conform" class="btn_1 green medium" disabled="disabled" name="submit" value="Book Now"/>
 			</div>
 		</div>
+    <?php
+    $_COOKIE['otp']=$otp;
+    ?>
 <script>
-$('input[type=submit]').click(function(e){
-if($("#otp").val() != "<?php=$otp;?>")
-{
-alert("Verify your OTP");
-return false;
-}
-});
-function checkname()
-{
-  var otp=document.getElementById( "otp" ).value;
-  if(otp)
-  {
-      $.ajax({
-      type: 'post',
-      url: 'checkdata.php',
-      data: {otp},
-      success: function (response) {
-        $( '#name_status' ).html(response);
-        if(response=="OTP Verified Successfully")
-        {
-          return true;
-        }
-        else
-        {
-          return false;
-        }
+$(document).ready(function(){
+  $('#otp_v').on('click',function(){
+    var otp="<?=$otp;?>";
+    alert(otp);
+    alert($('#otp').val());
+      if($('#otp').val()==otp){
+
+        $('#otp_v').text("Verified");
+        $('#conform').removeAttr('disabled');
+      }
+      else{
+        alert("Incorrect OTP");
+        location.reload();
       }
     });
-  }
-  else
-  {
-    $( '#name_status' ).html("");
-    return false;
-  }
-}
+  });
+
 
 </script>
 		<aside class="col-md-4">

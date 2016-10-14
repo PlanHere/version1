@@ -2,7 +2,7 @@
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
 <!--[if IE 9]><html class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
-<head><? require_once 'connection.php';?>
+<head><? require_once 'connection.php';error_reporting(0);?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -278,7 +278,9 @@ if($r){
 									</div><!-- End wish list-->
 								</div>
 							</div><!-- End box tour -->
-							</div><!-- End col-md-6 --><?php }}?>
+            </div><!-- End col-md-6 --><?php }}else{
+              echo "<div class='col-md-6'>No Hotels Found</div>";
+            }?>
 							</div><!-- End col lg 9 -->
 	</div><!-- End row -->
 </div><!-- End container -->

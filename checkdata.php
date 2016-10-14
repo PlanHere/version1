@@ -1,10 +1,10 @@
 <?php
 include 'connection.php';
-if(isset($_POST['otp']))
+if(isset($_GET['otp']))
 {
- $name=$_POST['otp'];
+ $name=$_GET['otp'];
 
- $checkdata=" SELECT otp FROM otpdata WHERE otp=$_POST['otp'] ";
+ $checkdata="select otp FROM otpdata WHERE otp=$name";
 
  $query=mysql_query($checkdata);
 
