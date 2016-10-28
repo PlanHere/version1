@@ -1193,7 +1193,9 @@ ul.add_info li i{
 	top:6px;
 	position:relative;
 }
-
+.dropdown-menu-right a{
+	color: #000 !important;
+}
 #filters_col{
 	background-color:#fff;
 	padding:15px 10px 15px 15px;

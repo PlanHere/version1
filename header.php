@@ -1,9 +1,15 @@
 <header>
+  <?php error_reporting(0); ?>
         <div id="top_line">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6"><i class="icon-mail"></i><strong> support@planhere.in</strong></div>
-                    
+                    <?php
+                    session_start();
+                      if(!isset($_SESSION['uname'])){
+                     ?>
+                     <script type="text/javascript">
+                     </script>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <ul id="top_links">
                             <li>
@@ -33,19 +39,43 @@
                                         </div>
                                         <a id="forgot_pw" href="./forgotpassword.php">Forgot password?</a>
                                         <input type="submit" name="" value="Sign in" id="Sign_in" class="button_drop">
-										
+
                                         <a href="./signup.php"><input type="submit" name="" value="Sign up" id="Sign_up" class="button_drop outline"></a>
-                                       </form> 
+                                       </form>
 									</div>
                                 </div><!-- End Dropdown access -->
                             </li>
                             <li><a href="wishlist.html" id="wishlist_link">Wishlist</a></li>
                         </ul>
                     </div>
+                    <?php }
+                      else {
+                        ?>
+                        <script type="text/javascript">
+                        </script>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <ul id="top_links">
+                                <li>
+                                    <div class="dropdown dropdown-access">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link"><?=$_SESSION['uname'];?></a>
+                                        <div class="dropdown-menu dropdown-menu-right" style="width:8pc !important;font-color:#000 !important;">
+                                          <a class="dropdown-item" href="#">Profile</a><br>
+                                          <a class="dropdown-item" href="#">Orders</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a class="dropdown-item" href="admin/logout.php">Logout</a>
+                                        </div>
+                                    </div><!-- End Dropdown access -->
+                                </li>
+                                <li><a href="wishlist.html" id="wishlist_link">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <?php
+                      }
+                     ?>
                 </div><!-- End row -->
             </div><!-- End container-->
         </div><!-- End top line-->
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3">
@@ -95,7 +125,7 @@
                                             <li><a href="404.html">Exhibitions</a></li>
                                             <li><a href="site_launch/index.html">Conferences & Workshops</a></li>
                                             <li><a href="gallery_4_columns.html">Sports</a></li>
-                                            
+
                                         </ul>
                                     </div>
                                     <div class="col-md-4">
@@ -155,14 +185,14 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-4">
-                                        
-                                       
+
+
                                         <h3><a href="#">Photographers</a> </h3>
                                         <h3><a href="#">Make-up Artist</a> </h3>
                                         <h3><a href="#">D.J's</a> </h3>
                                         <h3><a href="#">Decorators</a> </h3>
                                         <h3><a href="#">Miscellaneous</a> </h3>
-                                       
+
                                     </div>
                                 </div><!-- End menu-wrapper -->
                             </li>

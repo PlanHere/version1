@@ -2,7 +2,7 @@
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
 <!--[if IE 9]><html class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
-<head><? require_once 'connection.php';?>
+<head><? require_once 'connection.php';error_reporting(0);?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -243,10 +243,11 @@
 			<div class="row">
 				<br /><br /><br /><?php
 include 'connection.php';
-//error_reporting(0);
+error_reporting(E_ALL);
 $name=$_POST['hotelname'];
 $cat=$_POST['category'];
-$q="SELECT * from vendor_login,hotel_data hd,v_hotel WHERE hd.id=(select DISTINCT id from hotel_data hd,v_hotel v where hd.name LIKE '%$name%' OR v.meal LIKE '%$cat%')";
+$q="SELECT * FROM vendor_login LEFT JOIN hotel_data ON vendor_login.id=hotel_data.id LEFT JOIN v_hotel ON v_hotel.vhid=vendor_login.id WHERE vname LIKE '%$name%' AND v_hotel.meal LIKE '%$cat%'";
+// echo $q;
 $r=mysql_query($q);
 $count=mysql_num_rows($r);
 if($r){
@@ -254,7 +255,8 @@ if($r){
 		$vhid=$row1['vhid'];
 		$name=$row1['name'];
 		$rating=$row1['rating'];
-		$price=$row1['price'];?>
+		$price=$row1['price'];
+    ?>
 
 								<div class="col-md-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
 							<div class="hotel_container">
@@ -278,7 +280,9 @@ if($r){
 									</div><!-- End wish list-->
 								</div>
 							</div><!-- End box tour -->
-							</div><!-- End col-md-6 --><?php }}?>
+            </div><!-- End col-md-6 --><?php }}else{
+              echo "<div class='col-md-6'>No Hotels Found</div>";
+            }?>
 							</div><!-- End col lg 9 -->
 	</div><!-- End row -->
 </div><!-- End container -->
