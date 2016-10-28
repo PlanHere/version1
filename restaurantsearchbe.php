@@ -243,11 +243,18 @@
 			<div class="row">
 				<br /><br /><br /><?php
 include 'connection.php';
+<<<<<<< HEAD
 error_reporting(E_ALL);
 $name=$_POST['hotelname'];
 $cat=$_POST['category'];
 $q="SELECT * FROM vendor_login LEFT JOIN hotel_data ON vendor_login.id=hotel_data.id LEFT JOIN v_hotel ON v_hotel.vhid=vendor_login.id WHERE vname LIKE '%$name%' AND v_hotel.meal LIKE '%$cat%'";
 // echo $q;
+=======
+//error_reporting(0);
+$name=$_POST['hotelname'];
+$cat=$_POST['category'];
+$q="SELECT * from vendor_login,hotel_data hd,v_hotel WHERE hd.id=(select DISTINCT id from hotel_data hd,v_hotel v where hd.name LIKE '%$name%' OR v.meal LIKE '%$cat%')";
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
 $r=mysql_query($q);
 $count=mysql_num_rows($r);
 if($r){
@@ -255,8 +262,12 @@ if($r){
 		$vhid=$row1['vhid'];
 		$name=$row1['name'];
 		$rating=$row1['rating'];
+<<<<<<< HEAD
 		$price=$row1['price'];
     ?>
+=======
+		$price=$row1['price'];?>
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
 
 								<div class="col-md-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
 							<div class="hotel_container">
