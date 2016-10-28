@@ -29,7 +29,10 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
 
@@ -47,10 +50,17 @@
     <![endif]-->
         <?php
         include('./head_fun.php');
+<<<<<<< HEAD
+        require('way2sms-api.php');
+        $otp=intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
+        $msg="$otp is your One Time Password for Booking Confirmation @ PlanHere.in - Thanks & Regards<br>Team PlanHere.";
+        sendWay2SMS ( '8121018090' , '8121018090' , $_POST['phone'] ,$msg);
+=======
         include('way2sms-api.php');
         $otp=intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
         $msg="$otp is your One Time Password for Booking Confirmation @ PlanHere.in - Thanks & Regards<br>Team PlanHere.";
         sendWay2SMS ( '9000504436' , 'vinod' , $_POST['telephone'] ,$msg);
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
         ?>
 </head>
 <body>
@@ -151,7 +161,11 @@
           <div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Telephone</label>
+<<<<<<< HEAD
+							<input type="text"  id="telephone_booking" name="phone" class="form-control" value="<?=$_POST['phone'];?>">
+=======
 							<input type="text"  id="telephone_booking" name="telephone" class="form-control" value="<?=$_POST['phone'];?>">
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
 						</div>
 					</div>
 				</div>
@@ -194,8 +208,13 @@
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
+<<<<<<< HEAD
+										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP">
+                    <button type="button" id="otp_v" name="validate" value="verify">Verify</button>
+=======
 										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP" onkeyup="checkname();">
                     <div id="#name_status"></div>
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
 									</div>
 								</div>
 							</div>
@@ -238,6 +257,32 @@
 				<div class="form-group">
 					<label><input type="checkbox" name="policy_terms" id="policy_terms">I accept terms and conditions and general policy.</label>
 				</div>
+<<<<<<< HEAD
+				<input type="submit" id="conform" class="btn_1 green medium" disabled="disabled" name="submit" value="Book Now"/>
+			</div>
+		</div>
+    <?php
+    $_COOKIE['otp']=$otp;
+    ?>
+<script>
+$(document).ready(function(){
+  $('#otp_v').on('click',function(){
+    var otp="<?=$otp;?>";
+    alert(otp);
+    alert($('#otp').val());
+      if($('#otp').val()==otp){
+
+        $('#otp_v').text("Verified");
+        $('#conform').removeAttr('disabled');
+      }
+      else{
+        alert("Incorrect OTP");
+        location.reload();
+      }
+    });
+  });
+
+=======
 				<input type="submit" class="btn_1 green medium" name="submit" value="Book Now"/>
 			</div>
 		</div>
@@ -277,6 +322,7 @@ function checkname()
     return false;
   }
 }
+>>>>>>> 82851e758c509d1b1cc150228451c995e3a4fb6c
 
 </script>
 		<aside class="col-md-4">
