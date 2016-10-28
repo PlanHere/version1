@@ -91,7 +91,7 @@
 
     $to = $_POST['hotel_mail'];	/*YOUR EMAIL HERE*/
     $subject = "Request From PlanHere";
-    $headers = "From: PlanHere <noreply@planhere.in>";
+    $headers = "From: PlanHere <info@planhere.in>";
     $message = "BOOKING for HOTEL $name\n";
     $message .= "\nDate: " . $_POST['date'];
     $message .= "\nTime: " . $_POST['time'];
@@ -108,7 +108,7 @@
     //Confirmation page
     $user = "$mail";
     $usersubject = "Thank You - Booking summary from PlanHere";
-    $userheaders = "From: info@planhere.in\n";
+    $userheaders = "From: support@planhere.in\n";
     //Confirmation page WITH  SUMMARY
     $usermessage = "Thank you for your time, request successfully sent!.\nWe will contact you shortly.\nThanks\nTeam PlanHere";
     mail($user,$usersubject,$usermessage,$userheaders);

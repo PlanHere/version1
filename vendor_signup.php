@@ -451,7 +451,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Price per Night in ₹</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Price per Head in ₹</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <input type="text" name="price" class="form-control required" placeholder="Price per Night in ₹" >
                                             </div>

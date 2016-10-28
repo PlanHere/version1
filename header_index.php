@@ -1,5 +1,4 @@
 <header>
-  <?php error_reporting(0); ?>
         <div id="top_line">
             <div class="container">
                 <div class="row">
@@ -62,7 +61,7 @@
                                           <a class="dropdown-item" href="#">Profile</a><br>
                                           <a class="dropdown-item" href="#">Orders</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" href="admin/logout.php">Logout</a>
+                                          <a class="dropdown-item" href="logout.php">Logout</a>
                                         </div>
                                     </div><!-- End Dropdown access -->
                                 </li>

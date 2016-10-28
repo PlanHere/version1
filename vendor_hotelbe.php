@@ -57,6 +57,11 @@ if($q5){
 		$id=$row6['id'];
 		session_start();
 		$_SESSION['username']=$username;
+		$subject = "Thanks From Team PlanHere";
+		$message = "Dear $name,\nThanks For Joining with PlanHere";
+		$headers = "From : PlanHere <info@planhere.in>\r\n";
+		$headers.="Relpy-to : PlanHere Support<support@planhere.in>";
+		mail($email, $subject, $message,$headers);
 		header("Location:./admin/index.php");
 	//header("Location:single_hotel_working_booking.php?id=$id");
 	}
