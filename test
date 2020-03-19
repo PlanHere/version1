@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-971.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <link rel="shortcut icon" href="/themes/bootstrap/images/favicon.ico" type="image/x-icon"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="http://multicompany.darwinbox.io/assets/A.5a87a09d,,_css,,_bootstrap.min.css+5a87a09d,,_css,,_bootstrap-wizard.css+5a87a09d,,_jquery-ui-bootstrap,,_css,,_custom-theme,,_jquery-ui-1.8.16.custom.css+5a87a09d,,_css,,_bootstrap-responsive.css+5a87a09d,,_fonts,,_css,,_font-awesome.min.css+5a87a09d,,_css,,_style.css+5a87a09d,,_css,,_style1.css+5a87a09d,,_css,,_build.css+5a87a09d,,_css,,_star-rating.css+5a87a09d,,_css,,_jquery.dataTables.min.css+5a87a09d,,_css,,_introjs.css+5a87a09d,,_handsontable,,_jquery.handsontable.full.css+5a87a09d,,_handsontable,,_jquery.handsontable.bootstrap.css+3aa366ad,,_fileuploader.css+8a8387be,,_chosen.css+a65839ba,,_css,,_jquery_notification.css,Mcc.W4sXZm2z8N.css.pagespeed.cf.HSGkDuUQJg.css"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://multicompany.darwinbox.io/assets/33346267/jquery.js.pagespeed.jm.aE2HmyAR4P.js"></script>
+<script type="text/javascript" src="http://multicompany.darwinbox.io/assets/33346267/jui/js/jquery-ui.min.js.pagespeed.jm.e-HKoI4nbp.js"></script>
+<script src="http://multicompany.darwinbox.io/assets/5a87a09d/darwinboxjs,_default-darwinbox.js+js,_bootstrap-wizard.js+js,_bootstrap-treeview.js+js,_star-rating.js.pagespeed.jc.ISZWs6CZyG.js"></script><script>eval(mod_pagespeed_WDxPdixMhu);</script>
+<script>eval(mod_pagespeed_sJX2lgO8tl);</script>
+<script>eval(mod_pagespeed_TQKRs_gCoN);</script>
+<script>eval(mod_pagespeed_croBF0Qyxx);</script>
+<script src="http://multicompany.darwinbox.io/assets/5a87a09d/js/knockout.3.0.0.js+knockout.validation.3.0.0.js+bootstrap.js.pagespeed.jc.WkMuW6ptxP.js"></script><script>eval(mod_pagespeed_lN1BHDAQXt);</script>
+<script>eval(mod_pagespeed_hc2uIVl0W2);</script>
+<script>eval(mod_pagespeed_8xSQS6NL2e);</script>
+<script src="http://multicompany.darwinbox.io/assets/5a87a09d/js/jquery-migrate-1.0.0.js+jquery.simpler-sidebar.min.js+intro.js.pagespeed.jc.IWiuvHSATD.js"></script><script>eval(mod_pagespeed_UjbSv9sdzV);</script>
+<script>eval(mod_pagespeed_lKpF$rQaSO);</script>
+<script>eval(mod_pagespeed_npcRZhdp42);</script>
+<script type="text/javascript" src="http://multicompany.darwinbox.io/assets/5a87a09d/handsontable/jquery.handsontable.full.js.pagespeed.jm.YJmUsVYpCf.js"></script>
+<script src="http://multicompany.darwinbox.io/assets/5a87a09d,_js,_sticky.js+3aa366ad,_fileuploader.js+8a8387be,_chosen.jquery.min.js.pagespeed.jc.145wn2-0AS.js"></script><script>eval(mod_pagespeed_1Uvt7SiJit);</script>
+<script>eval(mod_pagespeed_fcO7Ez6aDz);</script>
+<script>eval(mod_pagespeed_KF0SZ_BfP6);</script>
+<script type="text/javascript" src="http://multicompany.darwinbox.io/assets/69794d1c/spacetree.js.pagespeed.jm.D_LEKSph2r.js"></script>
+<script src="http://multicompany.darwinbox.io/assets/14171ec6,_jquery.fullscreen.js+a65839ba,_js,_jquery_notification_v.1.js.pagespeed.jc.gQztSY0Oru.js"></script><script>eval(mod_pagespeed_Wqa6w_kr17);</script>
+<script>eval(mod_pagespeed_9v_p_8eW44);</script>
+<title id="darwinbox-title-id">delhivery</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+</head>
+<body>
+    <div class="topbar">
+        <div class="portlet" id="yw0">
+<div class="portlet-content">
+<style>.logoheader{margin:0}</style>
+<div class="main-navigation">
+  <div class="col-sm-2 col-xs-7">
+    <div class="logo logoheader">
+     <!--  <a href="#"><img src="" alt="logo"></a> -->
+     <a href="/"><h5 style="line-height:normal; text-align:left;margin-top:20px;">delhivery</h5></a>  </div>
+</div>
+<div class="col-sm-2 col-xs-5 hidden-sm hidden-md hidden-lg">
+  <div class="right-menu text-right">
+    <ul>
+      <li>
+        <form action="" class="search-form">
+         <div class="form-group has-feedback" id="search-form-right">
+          <label for="search" class="sr-only">Search</label>
+          <input type="text" class="form-control" name="search" id="search" placeholder="search">
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        </div>
+      </form>
+    </li>
+    <li>
+      <a href="#"><script data-pagespeed-no-defer>//<![CDATA[
+(function(){var g=this;function h(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};function l(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};function m(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n;function p(b,d,a,c,e){this.h=b;this.j=d;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=c;this.b={};this.a=[];this.c={}}function q(b,d){var a,c,e=d.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&c<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});function r(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(t())),131072>=a.length+e.length&&(a+=e),d=!0);u=a;if(d){c=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(v){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function t(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var u="";h("pagespeed.CriticalImages.getBeaconData",function(){return u});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://multicompany.darwinbox.io/settings/reportinghierarchy','QOs6thfRpi',true,false,'oRGFDAnWWi0');
+//]]></script><img src="" class="main-dp img-circle" alt=".." data-pagespeed-url-hash="2325255252" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+    </li>
+  </ul>
+</div>
+</div>
+<div class="col-sm-8">
+  <div class="clearfix"></div>
+  <nav class="navbar navbar-menu">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="navbars"> <i class="fa fa-bars"></i></span>
+      </button>
+      <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">Navigation</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="menu_list">
+        <li><a href="/" class="dashboard nav-dashboard"><span>Dashboard</span></a></li>
+                <li><a href="/vibe" class="streams nav-vibes"><span>Vibe</span></a></li>
+                <li><a href="/employee/list/is/1" class="employees nav-employee"><span>Employees</span></a></li>
+                        <li><a href="/payroll/setup/dashboard" class="payroll nav-payroll"><span>Payroll</span></a></li>
+                <li><a href="/settings/calendar" class="calender nav-calendar"><span>Calendar</span></a></li>
+        <li><a href="/reports" class="reports nav-reports"><span>Reports</span></a></li>
+                        <li><a href="/hrfiles" class="hr-documents nav-hrdocs"><span>HR Documents</span></a></li>
+              </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!-- /.navbar -->
+</div>
+<div class="col-sm-2 hidden-xs text-right">
+
+  <div class="right-menu">
+    <ul>
+      <li class="width70">
+        <form action="" class="search-form">
+         <div class="form-group has-feedback" id="search-form-right">
+          <label for="search" class="sr-only">Search</label>
+          <!-- <input type="text" class="form-control" name="search"  id="tags"  placeholder="search"> -->
+          <input id="globalsearch" class="search-query form-control" type="text" placeholder="Colleagues, Groups and Tags"/>
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        </div>
+      </form>
+    </li>
+    <li class="width30">
+      <a href="#" id="toggle-sidebar" style="float:right;"><span class="directory-avatar">RD</span></a>
+    </li>
+  </ul>
+  <div class="clearfix"></div>
+  <!-- <li class="dropdown  guided_tour_nav"><a onclick="javascript:introJs().start();" href="javascript:void(0);"><img src="" width="60%" height="60%" align="absmiddle" border="0"></a></li> -->
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<!-- Side Toggle Start here-->
+<div id="main-sidebar" class="main-sidebar-right">
+  <div class="profile_image text-center">
+    <div class="user-image">
+      <a href="#"><span class="directory-avatar">RD</span></a>
+    </div>
+    <div class="user-desc side-menu-head">
+      <span class="site-color3 fnt-size15 font-bold">Roopam</span>
+    </div>
+  </div>
+  <ul>
+    <li class="close-sb">
+      <a href="/employee/view/id/284">My Profile</a>
+    </li>
+
+        <li class="close-sb">
+      <a class="changeaccess" href="#">Switch To Employee</a>
+    </li>
+        <li class="close-sb">
+      <a href="/employee/changepassword">Change Password</a>
+    </li>
+    <li class="close-sb">
+      <a href="/employee/settings">Email Settings</a>
+    </li>
+        <li class="close-sb">
+      <a href="/settings">Settings</a>
+    </li>
+    <li class="close-sb">
+      <a href="/settings/accountdetails">Account</a>
+    </li>
+    <!-- <li class="close-sb">
+      <a href="">PMS</a>
+    </li>  -->
+        <li class="close-sb">
+      <a href="/recruitment">Recruitment</a>
+    </li>
+
+                                    <div class="sidebar-line">
+                <div class="divider-line4"></div>
+              </div>
+   <!--  <li class="close-sb">
+      <a href="#">Help</a>
+    </li> -->
+    <li class="close-sb">
+      <a href="/user/logout">Logout</a>
+    </li>
+  </ul>
+</div>
+<!-- Side Toggle Closing here-->
+<!--side bar toggle-->
+<script>$(document).ready(function(){$("#main-sidebar").delay(1500).fadeIn(100);});</script>
+<script type="text/javascript">jQuery("#main-sidebar").simplerSidebar({opener:"#toggle-sidebar",top:0,animation:{easing:"easeOutQuint"},sidebar:{closingLinks:".close-sb"}});</script>
+<!--side bar toggle-->
+<!-- notification JS -->
+<!-- notification JS -->
+<!-- APPROVALS JS -->
+<!-- APPROVALS JS -->
+<!-- for header sticky-->
+<script type="text/javascript">$(window).load(function(){$(".fixednav").sticky({topSpacing:0});});$('body').click(function(e){if(e.target.id=="globalsearch"){if($('body').find("#globalsearch").parent().hasClass("search-form-open")){$('body').find("#globalsearch").parent().removeClass("search-form-open");}else{$('body').find("#globalsearch").parent().addClass("search-form-open");}}else{if($('body').find("#globalsearch").parent().hasClass("search-form-open")){$('body').find("#globalsearch").parent().removeClass("search-form-open");}}});</script>
+<!-- for header sticky-->
+<!-- INTRO JS GUIDED TOUR-->
+<script type="text/javascript">var page_full_url=window.location;var split_page_url=window.location.pathname.split('/');var page_name=split_page_url.pop();var page_name_one=split_page_url[1];var page_name_two=split_page_url[2];var page_name_three=split_page_url[3];var page_name_four=split_page_url[4];if(isInt(page_name)){var constant_page_name=page_name_one+"_"+page_name_two+"_"+page_name_three+"_"+page_name_four;var cookie_page_name=(page_name=='')?'dashboard':constant_page_name;}else{var cookie_page_name=(page_name=='')?'dashboard':page_name;}$(document).ready(function(){var check_guided_tour=getCookie('darwinbox_guid_tour_'+cookie_page_name);if(check_guided_tour!=1){javascript:introJs().start();}});$(".introjs-skipbutton").live("click",function(e){document.cookie="darwinbox_guid_tour_"+cookie_page_name+"=1; expires=18 Dec 2017 12:00:00 UTC; path="+page_full_url+";";});function getCookie(cname){var name=cname+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(name)==0)return c.substring(name.length,c.length);}return"";}function isInt(value){return!isNaN(value)&&parseInt(Number(value))==value&&!isNaN(parseInt(value,10));}</script>
+<!-- INTRO JS GUIDED TOUR-->
+</div>
+</div>    </div>
+    <div class="container-full container-minheight">
+        <div class="">
+            <!--Outer Shell-->
+             <div class="fixednav" data-spy="affix" data-offset-top="80">
+    <div class="bottom-navigation">
+        <ul class="sub-navigation">
+                            <li><a href="/employee/managerlist">MY REPORTEES</a></li>
+                        <li><a href="/employee">DIRECTORY</a></li>
+            <li><a href="#" class="active">ORG STRUCTURE</a></li>
+            <li><a href="/settings/organisationstructure">FUNCTIONAL STRUCTURE</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!-- search bar  -->
+<!-- <div class="container-fluid">
+    <div class="col-md-12 col-sm-12 ">
+        <input type="text" class="form-control serchbar1 pull-right" id="tags" placeholder="Search for org people">
+    </div>
+
+</div> -->
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Select Group Company</label>
+            <form name="companyform" id="companyform" method="post" action="/settings/reportinghierarchy">
+                <select name="grp_cmp" id="user_list_dropdown" class="form-control" onchange="this.form.submit()">
+                    <option value=''>delhivery</option><option value='5747feaaed541' selected='selected'>Skynet</option><option value='5747ff1447bc9'>International Operations</option><option value='5774b97232cf9'>GCX</option>                </select>
+            </form>
+        </div>
+    </div>
+<div class="clearfix"></div>
+
+<div class="container-fluid">
+    <div class="col-md-12 ">
+        <table class="hidden">
+            <tbody>
+                <tr>
+                    <td><label for="s-normal">Normal </label></td>
+                    <td><input type="radio" value="normal" checked="checked" name="selection" id="s-normal"></td>
+                </tr>
+                <tr>
+                    <td><label for="s-root">Set as Root </label></td>
+                    <td><input type="radio" value="root" name="selection" id="s-root"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div id="clone"></div> -->
+        <div align="right">
+            <a id="fullscreen" style="clear: both; display:block; cursor: pointer;margin-top:10px;"><img src="data:image/webp;base64,UklGRqQAAABXRUJQVlA4TJgAAAAvE8AEEN9gIG2bzL/o7VchICjyfzQBQZH/oylu28bNRUq59jqCSZpqO6YfKQEeGkAMxOAALDQ2gPgQAgCQ/wAMGklSdPfMzOtfKc69goj+K3LbtpFOWZ2/IMchsPRuhodmDYaVZrOoIRoaAaqjLcbSIyti/u2ZxrClHiBMd66YL+X50JIAGpgt3Q8LYW+FvWmd9kfYX0J/Dg==" data-pagespeed-url-hash="334654690" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>Go Fullscreen</a></div>
+        <!--  <div class="row">
+        <!-- <div class="col-sm-6" align="left">
+            <a id="fullscreen" style="clear: both; display:block; cursor: pointer;"><img src="/images/icons/fullscreen.png" />Go Fullscreen</a>
+            <span class="label" style="background-color:#ADD8E6;">Has Reportees</span>
+            <span class="label" style="background-color:#EA9400;">Hierarchy Path</span>
+        </div>
+        <div class="col-sm-12" align="right">
+            <br/>
+            <span><input type="radio" value="left" checked="checked" name="orientation" id="r-left">&nbsp;&nbsp;<label for="r-left">Left</label> | </span>
+            <span><input type="radio" value="top" name="orientation" id="r-top">&nbsp;&nbsp;<label for="r-top">Top</label> | </span>
+             <span><input type="radio" value="bottom" name="orientation" id="r-bottom">&nbsp;&nbsp;<label for="r-bottom">Bottom</label> | </span>
+            <span><input type="radio" value="right" name="orientation" id="r-right">&nbsp;&nbsp;<label for="r-right">Right </label> </span>
+        </div>
+    </div> -->
+
+        <div id="orgContainer"></div>
+
+        <div id="modal_output"></div>
+        <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</div>
+<style>div.node{display:block;font-size:.7em;padding:7px}div#orgContainer{margin:0 auto;width:1230px;min-height:600px;position:relative}</style>
+<script>var labelType,useGradients,nativeTextSupport,animate;$(document).ready(function(){$("#fullscreen").click(function(e){e.preventDefault();$("#orgContainer").fullScreen({'background':'#f6f6f6'});});});var Log={elem:false,write:function(text){}};function init(){var json={'id':'7','name':'delhivery','data':{'img':'','title':'','jobtitle':'',},'children':[{'id':'57651d7e7ee48','name':'Ajay P','data':{'img':'<span class= "org-chart">AP</span>','title':'Ajay P','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d7cab5cf','name':'Akshay S','data':{'img':'<span class= "org-chart">AS</span>','title':'Akshay S','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d7657303','name':'Aniket Padgilwar','data':{'img':'<span class= "org-chart">AP</span>','title':'Aniket Padgilwar','jobtitle':'HR Executive Manager, HR Skynet',},'children':[]},{'id':'57651d7ec87e7','name':'Atul I','data':{'img':'<span class= "org-chart">AI</span>','title':'Atul I','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d75be6ff','name':'Calvin Harris','data':{'img':'<span class= "org-chart">CH</span>','title':'Calvin Harris','jobtitle':'Executive Manager, HR Skynet',},'children':[]},{'id':'57651d75165ac','name':'Daniel Radcliffe','data':{'img':'<span class= "org-chart">DR</span>','title':'Daniel Radcliffe','jobtitle':'Deputy Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7c67613','name':'Deepak M','data':{'img':'<span class= "org-chart">DM</span>','title':'Deepak M','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d758427f','name':'Heath Ledger','data':{'img':'<span class= "org-chart">HL</span>','title':'Heath Ledger','jobtitle':'Deputy Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d754c0c5','name':'Justin Trudeau','data':{'img':'<span class= "org-chart">JT</span>','title':'Justin Trudeau','jobtitle':'Deputy Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7aa7444','name':'Kishor P','data':{'img':'<span class= "org-chart">KP</span>','title':'Kishor P','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d7aef841','name':'Kushal M','data':{'img':'<span class= "org-chart">KM</span>','title':'Kushal M','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d74ca8af','name':'Mike Ross','data':{'img':'<span class= "org-chart">MR</span>','title':'Mike Ross','jobtitle':'Finance Officer, Finance Skynet',},'children':[]},{'id':'576525e768ac1','name':'Mohan Reddy','data':{'img':'<span class= "org-chart">MR</span>','title':'Mohan Reddy','jobtitle':'Chief Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7d8f7cc','name':'Moksh P','data':{'img':'<span class= "org-chart">MP</span>','title':'Moksh P','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d748e09a','name':'Neel Brown','data':{'img':'<span class= "org-chart">NB</span>','title':'Neel Brown','jobtitle':'Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7d08b80','name':'Om P','data':{'img':'<span class= "org-chart">OP</span>','title':'Om P','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d7ddb720','name':'Rajendra M','data':{'img':'<span class= "org-chart">RM</span>','title':'Rajendra M','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d7c1bab9','name':'Rajesh P','data':{'img':'<span class= "org-chart">RP</span>','title':'Rajesh P','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d7bcc112','name':'Rakesh I','data':{'img':'<span class= "org-chart">RI</span>','title':'Rakesh I','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d7418ed1','name':'Ram Kumar','data':{'img':'<span class= "org-chart">RK</span>','title':'Ram Kumar','jobtitle':'Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7392274','name':'Sai Shankar','data':{'img':'<span class= "org-chart">SS</span>','title':'Sai Shankar','jobtitle':'Vice President, Finance Skynet',},'children':[]},{'id':'57651d76e51f2','name':'Sakshi Gupta','data':{'img':'<span class= "org-chart">SG</span>','title':'Sakshi Gupta','jobtitle':'Sales & HR Personnels, HR Skynet',},'children':[]},{'id':'57651d7735510','name':'Sanchi Rao','data':{'img':'<span class= "org-chart">SR</span>','title':'Sanchi Rao','jobtitle':'Sales & HR Personnels, HR Skynet',},'children':[]},{'id':'57651d73d1e85','name':'Sanju Mishra','data':{'img':'<span class= "org-chart">SM</span>','title':'Sanju Mishra','jobtitle':'Finance Officer, Finance Skynet',},'children':[]},{'id':'574d901a2c7cb','name':'Santhosh K','data':{'img':'<span class= "org-chart">SK</span>','title':'Santhosh K','jobtitle':'Executive Manager, HR Skynet',},'children':[]},{'id':'574d41964a7a6','name':'Shakti Mohan','data':{'img':'<span class= "org-chart">SM</span>','title':'Shakti Mohan','jobtitle':'Executive, HR Skynet',},'children':[{'id':'574d33858b433','name':'Shashank Uppala','data':{'img':'<span class= "org-chart">SU</span>','title':'Shashank Uppala','jobtitle':'Executive, HR Skynet',},'children':[{'id':'574bd0ad80178','name':'Gayatri Raj','data':{'img':'<span class= "org-chart">GR</span>','title':'Gayatri Raj','jobtitle':'Assistant Manager, Facility Administration',},'children':[{'id':'574bd931db73a','name':'Kishore Kompally','data':{'img':'<span class= "org-chart">KK</span>','title':'Kishore Kompally','jobtitle':'Senior Executive, Payables and Accounts Receivables',},'children':[]},{'id':'574bd93197b27','name':'Krishna Binil','data':{'img':'<span class= "org-chart">KB</span>','title':'Krishna Binil','jobtitle':'Senior Executive, Payables and Accounts Receivables',},'children':[{'id':'574bdf4d04b11','name':'Mahesh Kumar Guggu','data':{'img':'<span class= "org-chart">MG</span>','title':'Mahesh Kumar Guggu','jobtitle':'Senior Executive, Payables and Accounts Receivables',},'children':[]},{'id':'574d901a60713','name':'Sai Manoj K','data':{'img':'<span class= "org-chart">SK</span>','title':'Sai Manoj K','jobtitle':'Executive Manager, HR Skynet',},'children':[]},{'id':'574bdf4d7297b','name':'Surendra Udipi','data':{'img':'<span class= "org-chart">SU</span>','title':'Surendra Udipi','jobtitle':'Executive, Payables and Accounts Receivables',},'children':[]},]},{'id':'575970c8ab9db','name':'Kunal D','data':{'img':'<span class= "org-chart">KD</span>','title':'Kunal D','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},]},{'id':'5759543e89bd0','name':'Kirti K','data':{'img':'<span class= "org-chart">KK</span>','title':'Kirti K','jobtitle':'Executive Manager, HR Skynet',},'children':[]},]},{'id':'574bd520eb737','name':'Srinivasa Rao Malli','data':{'img':'<span class= "org-chart">SM</span>','title':'Srinivasa Rao Malli','jobtitle':'Executive, Payables and Accounts Receivables',},'children':[{'id':'574bd521131d1','name':'Narothamu Poturi','data':{'img':'<span class= "org-chart">NP</span>','title':'Narothamu Poturi','jobtitle':'Senior Executive, Payables and Accounts Receivables',},'children':[{'id':'574d90193bdd0','name':'Sitaram L','data':{'img':'<span class= "org-chart">SL</span>','title':'Sitaram L','jobtitle':'Executive, HR Skynet',},'children':[]},]},]},{'id':'574d3fa84c4ee','name':'Supriya Gupta','data':{'img':'<span class= "org-chart">SG</span>','title':'Supriya Gupta','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'574bd9317855d','name':'Vijayalakshmi Patlolla','data':{'img':'<span class= "org-chart">VP</span>','title':'Vijayalakshmi Patlolla','jobtitle':'Executive, Payables and Accounts Receivables',},'children':[]},]},{'id':'57651d7607f67','name':'Shankar Jain','data':{'img':'<span class= "org-chart">SJ</span>','title':'Shankar Jain','jobtitle':'Executive Manager, HR Skynet',},'children':[]},{'id':'577f68f0b4c6b','name':'Shravan Kumar','data':{'img':'<span class= "org-chart">SK</span>','title':'Shravan Kumar','jobtitle':'Executive, HR Delhivery',},'children':[]},{'id':'57651d7d47bb9','name':'Soham I','data':{'img':'<span class= "org-chart">SI</span>','title':'Soham I','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d7453b36','name':'Sukriti Gupta','data':{'img':'<span class= "org-chart">SG</span>','title':'Sukriti Gupta','jobtitle':'Finance Officer, Finance Skynet',},'children':[]},{'id':'57651d7b3e6da','name':'Tushar S','data':{'img':'<span class= "org-chart">TS</span>','title':'Tushar S','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d7e31d25','name':'Vijendra S','data':{'img':'<span class= "org-chart">VS</span>','title':'Vijendra S','jobtitle':'CS Executive, Customer Support',},'children':[]},{'id':'57651d7b860d3','name':'Yash P','data':{'img':'<span class= "org-chart">YP</span>','title':'Yash P','jobtitle':'Assistant Manager, Facility Administration',},'children':[]},{'id':'57651d769c19b','name':'Yuga Borkar','data':{'img':'<span class= "org-chart">YB</span>','title':'Yuga Borkar','jobtitle':'HR Executive Manager, HR Skynet',},'children':[]},]}
+var st=new $jit.ST({injectInto:'orgContainer',duration:300,transition:$jit.Trans.Quart.easeInOut,levelDistance:50,levelsToShow:1,Navigation:{enable:true,panning:true},offsetX:0,offsetY:200,Node:{height:55,width:170,type:'rectangle',overridable:true},Edge:{type:'bezier',overridable:true},onCreateLabel:function(label,node){label.id=node.id;label.innerHTML=node.data.img+"<div class=\"paddingleft10 pull-right\" style=\"float:right;\">&nbsp;<span id=\"firstText\" title='"+node.data.title+"' style=\"font-size:1.5em;\">"+node.name+"</span><span style=\"padding-left:5px;\" id=\"secondlastText\">"+node.data.jobtitle;label.onclick=function(){if(normal.checked){st.onClick(node.id);}else{st.setRoot(node.id,'animate');}};var style=label.style;style.cursor='pointer';},onBeforePlotNode:function(node){var varId=node.id;if(node.selected){node.data.$color="#bae7fb";}else{delete node.data.$color;if(!node.anySubnode("exist")){var count=0;node.eachSubnode(function(n){count++;});if(count>=1)node.data.$color="#ddd";node.data.$height=55;}}},onBeforePlotLine:function(adj){if(adj.nodeFrom.selected&&adj.nodeTo.selected){adj.data.$color="#87cdee";adj.data.$lineWidth=2;}else{adj.data.$color="#ccc";adj.data.$lineWidth=1;}}});st.loadJSON(json);st.compute();st.geom.translate(new $jit.Complex(0,0),"current");st.onClick(st.root);var top=$jit.id('r-top'),left=$jit.id('r-left'),bottom=$jit.id('r-bottom'),right=$jit.id('r-right'),normal=$jit.id('s-normal');function changeHandler(){if(this.checked){top.disabled=bottom.disabled=right.disabled=left.disabled=true;st.switchPosition(this.value,"animate",{onComplete:function(){top.disabled=bottom.disabled=right.disabled=left.disabled=false;}});}};}init();</script>
+<style>#firstText{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:120px;display:inline-block}#secondlastText{white-space:nowrap;overflow:hidden;display:block;width:120px;text-overflow:ellipsis}.node .org-chart{margin-top:8px;padding:6px;padding-top:5px}#orgContainer-label div:first-child{text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:170px}.paddingleft10{padding-left:10px}</style>                <!--Outer Shell-->
+        </div>
+    </div> <!-- /container -->
+
+    <footer>
+        <div class="footer">
+            <div class="col-md-12 text-right footerDiv">
+                <a href="#"><span>Powered By:</span> DarwinBox</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+
+    <div id="waiter" style="display: none;">
+        <div id="server_handshake">
+            <!-- <div id="spinner"><img src="/images/darwinbox-hold-on.gif" onclick="$('#waiter').hide();"></div> -->
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+          </div>
+      </div>
+  </div>
+<script type="text/javascript">//<![CDATA[
+jQuery(function($){jQuery('a[rel="tooltip"]').tooltip();$(document).ajaxStart(function(){$("#waiter").show();});$(document).ajaxStop(function(){$("#waiter").hide();});$("form").submit(function(){$(this).find("input[type=\"submit\"]").click(function(){return false;});});$(".date_picker").datepicker({showAnim:"fold",changeMonth:true,changeYear:true,dateFormat:"yy-mm-dd",yearRange:"c-100:",});var hash=window.location.hash;$("a[href='"+hash+"']").trigger("click");$.widget("custom.catcomplete",$.ui.autocomplete,{_renderMenu:function(ul,items){var self=this,currentCategory="";$.each(items,function(index,item){if(item.category!=currentCategory){ul.append("<li class='ui-autocomplete-category ui-autocomp-people'><div><b>"+item.category+"</b></div></li>");currentCategory=item.category;}self._renderItem(ul,item);});},_renderItem:function(ul,item){return $("<li class='autocomp-item'></li>").data("ui-autocomplete-item",item).append("<a>"+item.icon+"<span>"+item.label+"</span>"+"<span class='caption'>"+item.desc+"</span>"+"</a>").appendTo(ul);}});$("#globalsearch").catcomplete({delay:3,source:"/messages/search",focus:function(event,ui){return false;},select:function(event,ui){window.location.href=ui.item.link;}});$(document.body).on("click",".dashbutton_nav",function(e){e.preventDefault();var $this=$(this);var res=$this.attr("id");if(res!=""){$.ajax({data:{filter:res},dataType:"json",url:"/dashboard/getWidgetData",beforeSend:function(){if($("#db_widget_modal").length>0){$("#db_widget_modal").remove();}},success:function(data){if(data.status=="success"){$("#modal_output").html("").html(data.update);$("#db_widget_modal").modal({backdrop:true,show:true,keyboard:true});}}});}else{window.location.href=$(this).attr("href");}});$(document.body).on("click",".changeaccess",function(e){e.preventDefault();$.ajax({dataType:"json",url:"/dashboard/changeAccess",success:function(data){if(data.status=="success"){var url="/dashboard";window.location.href=url;}}});});availableTags=[{"id":"5762ea29b9c9e","label":"Aashutosh Pandey Bhardwaj","value":"amandeepkaur.gmaiil.com"},{"id":"57651d71e1eb4","label":"Abhay Sharma","value":"abhay123.gmail.com"},{"id":"57651d7776012","label":"Abhijit I","value":"abhijit.test.cm"},{"id":"574d3fa87f74c","label":"Abhilasha Kshtriyaa","value":"abhilasha.gmail.com"},{"id":"57515723bfcaa","label":"Abhinav Reddy","value":"multicompany_111642503d87f6ce3e54dd5e201b064e.darwinbox.in"},{"id":"57515c07f194d","label":"Abhishek Reddy","value":"abhishek.gmail.com"},{"id":"57515c07b5d19","label":"Aishu Iyer","value":"akshaya.n.darwinbox.in"},{"id":"57651d7e7ee48","label":"Ajay P","value":"ajay.w.com"},{"id":"574d90196eed7","label":"Akhila Chennaipeta","value":"anil.gmail.com"},{"id":"57651d7cab5cf","label":"Akshay S","value":"akshay.test.cm"},{"id":"57999f208da9f","label":"Amala Patel","value":"ammu.darwinbox.in"},{"id":"57651d704b6a9","label":"Amandeep Kaur","value":"amandeepdarwin.yopmail.com"},{"id":"574d64d3d0088","label":"Amit W","value":"amit.w.com"},{"id":"5762ea35156d5","label":"Amol Waghmare","value":"akshay"},{"id":"574d5ffb509c8","label":"Anamika Joy","value":"multicompany_f510a57b9ac0c7db89b9df75200dda87.darwinbox.in"},{"id":"579649d18b9f8","label":"Anaya Kancharla","value":"multicompany_457864704ebf8e8cc80243b3b73d2fcb.darwinbox.in"},{"id":"57651d7657303","label":"Aniket Padgilwar","value":"aniketpadgilwar.gmaiil.com"},{"id":"574bd9322a0a0","label":"Anilkumar Mudde","value":"rueben_gastellum.gastellum.co.uk"},{"id":"5763e1c5f0fb1","label":"Anirudh Sriraman","value":"soham.test.cm"},{"id":"577627de65bac","label":"Anitaa Jain","value":"anita.ghm.vbn"},{"id":"57651d6ff2386","label":"Ankit Vohra","value":"ankitavohra.gmaiil.com"},{"id":"574920fd60a7c","label":"Ankita Sharma","value":"multicompany_490603dde45d575ea552c89efe6aa833.darwinbox.in"},{"id":"5767b96b30351","label":"Ankita Sharma","value":"ankita.hotmail.com"},{"id":"57651d78178d5","label":"Arun M","value":"arun.test.cm"},{"id":"57651d7f2bf81","label":"Ashish P","value":"ashish.test.cm"},{"id":"5762ea300e40d","label":"Ashwin Vasudevan","value":"yugaborkar.gmaiil.com"},{"id":"5762ea2c11c7a","label":"Asif Memon","value":"kaushanisingh.gmaiil.com"},{"id":"57975096d9595","label":"Athaya Sharma","value":"athaya.yopmail.com"},{"id":"57651d7ec87e7","label":"Atul I","value":"atul.test.cm"},{"id":"57650d40c0874","label":"Avijeet I","value":"AvijeetI.gmaiil.com"},{"id":"574d3fa8236dc","label":"Avnish Singh","value":"avnish.singh.com"},{"id":"57a06be548b87","label":"Bharat H","value":"bharath.sen.cm"},{"id":"57965504caab1","label":"Bill Murray","value":"bill.murray.genesis.com"},{"id":"57651d75be6ff","label":"Calvin Harris","value":"calvinharris.gmaiil.com"},{"id":"574c0d1aecbcc","label":"Carol Gupta","value":"carolgupta.gmail.com"},{"id":"57651d811f9cd","label":"Chandrakant P","value":"chandrakant.test.cm"},{"id":"57651d75165ac","label":"Daniel Radcliffe","value":"danielradcliffe.gmaiil.com"},{"id":"57a07499b237a","label":"Danny Denzopa","value":"multicompany_251ed9319d1160b4176003faf96db98c.darwinbox.in"},{"id":"57970e4e6b052","label":"Deepa Sharma","value":"deepa.yopmail.com"},{"id":"57974b92da2cd","label":"Deepa Sharma","value":"vikshita.yopmail.com"},{"id":"57651d7c67613","label":"Deepak M","value":"deepak.test.cm"},{"id":"57651d804c867","label":"Dilip P","value":"dilip.test.cm"},{"id":"5784970d40cc5","label":"Edward .","value":"multicompany_0f944f68c4a10d725a51f68329ababeb.darwinbox.in"},{"id":"5799a6c46773e","label":"Emilia Clarke","value":"emilia.clarke.gameofthrone.com"},{"id":"5774d782bf46f","label":"Firstname* Lastname*","value":"email.email.com"},{"id":"57a081bfe5aad","label":"Garima Sen","value":"multicompany_ad476cb9f9e5b1d95313614fef975b95.darwinbox.in"},{"id":"57483efa54987","label":"Gaurav Raj","value":"GauravRaj.gmaiil.com"},{"id":"574d64d3e713b","label":"Gautam R","value":"gautam.raj.com"},{"id":"574bd0ad80178","label":"Gayatri Raj","value":"multicompany_9659aea4b1e8b105f71201a99216f2fd.darwinbox.in"},{"id":"577b6e560ff6a","label":"Gayatri Joshi","value":"gayatri.joshi.com"},{"id":"579f03249bd19","label":"Geeta H","value":"geeta.h.cm"},{"id":"57999eaf7b8d2","label":"Gopal Badeti","value":"gopalbadeti.1.badeti.com"},{"id":"57651d735a09c","label":"Grace Mathews","value":"gracemathews.gmaiil.com"},{"id":"57a07cb74d99c","label":"Gulkand Rawat","value":"multicompany_815d04434363460491d99628c386e4d4.darwinbox.in"},{"id":"57a038588bc7f","label":"Gunjan Sethi","value":"gunjan.sethi.cm"},{"id":"57651d758427f","label":"Heath Ledger","value":"heathledger.gmaiil.com"},{"id":"57960dc26d4b2","label":"Heath Leadger","value":"multicompany_818757929fd842b42641e61cb7790640.darwinbox.in"},{"id":"575970476f69d","label":"Heena J","value":"heena.ta.hj"},{"id":"5777a08034621","label":"Heenali Khan","value":"heena.khan.com"},{"id":"57653ed07941c","label":"Hemangi H","value":"hemangi.test.cm"},{"id":"57651d77ba77b","label":"Hemant P","value":"hemant.test.cm"},{"id":"576793c0e3dbe","label":"Hemant J","value":"multicompany_9432b63d8c0dd94cc1afc4445cd34f81.darwinbox.in"},{"id":"57653ed033b07","label":"Himanshu I","value":"himanshu.test.cm"},{"id":"57a2e6ca71907","label":"Hugo Bossy","value":"multicompany_811e1f97168cb4e5aea13a46097dfe26.darwinbox.in"},{"id":"5767c429b79d0","label":"Jack Welsh","value":"jwelsh.gmail.com"},{"id":"57a067457eda8","label":"Jecob Jeorge","value":"multicompany_b0274596cfb4eadcb67e3a5326ec62df.darwinbox.in"},{"id":"576b7ffe2e136","label":"Jessica Pearson","value":"jessicapearson.gmaiil.com"},{"id":"5774d6282ec5e","label":"John K","value":"john.jk.cm"},{"id":"574836dc05107","label":"Justin Brown","value":"justin.brown.justin.com"},{"id":"57651d754c0c5","label":"Justin Trudeau","value":"justintrudeau.gmaiil.com"},{"id":"5767b7b15b597","label":"Justin Timberlake","value":"justin.timburlakest.darwinbox.in"},{"id":"579b1edd7aec1","label":"Kanikaa Grovers","value":"kanika.grover.com"},{"id":"57483efa3339e","label":"Karan Soori","value":"pavankumarhrms1.gmail.com"},{"id":"577636f6abd13","label":"Kashi Jain","value":"multicompany_541f11c56e044525a5564221a9784b37.darwinbox.in"},{"id":"57651d726020d","label":"Kaushani Singh","value":"kaushanisingh.gmaiil.com"},{"id":"57651d73177d3","label":"Kavya Joseph","value":"kavyajoseph.gmaiil.com"},{"id":"5767b96ac7f56","label":"Kiran Maddula","value":"kmaddula.gmail.com"},{"id":"5759543e89bd0","label":"Kirti K","value":"multicompany_511e227163ac58b27dd20d25eece57f1.darwinbox.in"},{"id":"57651d7aa7444","label":"Kishor P","value":"kishor.test.cm"},{"id":"574bd931db73a","label":"Kishore Kompally","value":"corrinne_jaret.gmail.com"},{"id":"574bd520c4642","label":"Koyana Chennaipeta","value":"gadagottu.gmail.com"},{"id":"574bd93197b27","label":"Krishna Binil","value":"fernanda.writer.co.uk"},{"id":"574d901748805","label":"Krishna K","value":"multicompany_28876d821989cdaba0ecb50d835155b1.darwinbox.in"},{"id":"574d901882d60","label":"Krishna K","value":"multicompany_9e9e3f4447d36ba39572424301fa8b79.darwinbox.in"},{"id":"575970c8ab9db","label":"Kunal D","value":"kunal.ta.kd"},{"id":"57651d78ac00d","label":"Kunal P","value":"kunal.test.cm"},{"id":"57651d7aef841","label":"Kushal M","value":"kushal.test.cm"},{"id":"57651d71a3908","label":"Lydia Shresta","value":"lydiashresta.gmaiil.com"},{"id":"5763e1c7da046","label":"Maddie Iyer","value":"ashish.test.cm"},{"id":"5757c934104e7","label":"Mahesh Babu","value":"multicompany_8542b3522694d2c64b5671a2608b6029.darwinbox.in"},{"id":"574bdf4d04b11","label":"Mahesh Kumar Guggu","value":"mee.lapinski.yahoo.com"},{"id":"574d901a91baf","label":"Mahesh Kumar K","value":"multicompany_89df95332d241e79a14d998e24d19dd5.darwinbox.in"},{"id":"5763e1c68da8d","label":"Megna Murali","value":"rajendra.test.cm"},{"id":"57651d74ca8af","label":"Mike Ross","value":"mikeross.gmaiil.com"},{"id":"576525e768ac1","label":"Mohan Reddy","value":"mohanreddy.gmaiil.com"},{"id":"57651d7d8f7cc","label":"Moksh P","value":"moksh.test.cm"},{"id":"574d5ffb79f24","label":"Monish Singh","value":"multicompany_5486e0efa29152121173accc07146702.darwinbox.in"},{"id":"57651d72d4ed9","label":"Mounika Roy","value":"mounikaroy.gmaiil.com"},{"id":"574bd9327d15e","label":"Murali Mohan Potaraju","value":"edgar.kanne.yahoo.com"},{"id":"574be0afc63de","label":"Murali Mohan Potaraju","value":"edgar.kanne1.yahoo.com"},{"id":"574d9019eb3df","label":"Murali Mohan K","value":"multicompany_075e0f608947a9a6ed658a3c0e60f011.darwinbox.in"},{"id":"57651d71261c9","label":"Naman Chawhan","value":"namanchawhan.gmaiil.com"},{"id":"5748359575cd2","label":"Namrita Singh","value":"multicompany_55c680655d2e1482ea953885403105e2.darwinbox.in"},{"id":"577f68f064c57","label":"Naresh Ch","value":"multicompany_a4330ca38e6e7ce41f4721a658fbc138.darwinbox.in"},{"id":"574d9017c8928","label":"Narotham Reddy K","value":"multicompany_3aa9271f48dc138f69761dfaea1f40d1.darwinbox.in"},{"id":"574bd521131d1","label":"Narothamu Poturi","value":"marg.hotmail.com"},{"id":"57651d748e09a","label":"Neel Brown","value":"neelbrown.gmaiil.com"},{"id":"57651d7fd66ed","label":"Neel S","value":"neel.test.cm"},{"id":"574d3385b759f","label":"Nikhilesh Muzaria","value":"NikhileshMuzaria.gmaiil.com"},{"id":"5767b96c639a0","label":"Nikhilesh Yadav","value":"nikkiy.yahoo.com"},{"id":"5767b96bf0bbd","label":"Nikisha Patel","value":"npatel123.gmail.com"},{"id":"574c0d1b1d2a6","label":"Nikita Singh","value":"NikitaSingh.gmaiil.com"},{"id":"574d3fa869331","label":"Nikita Mujoria","value":"NikitaMujoria.gmaiil.com"},{"id":"574bd0ad55dad","label":"Nilu R","value":"multicompany_07e84361c3c4b698cd222d7e84155f1e.darwinbox.in"},{"id":"57651d7d08b80","label":"Om P","value":"om.test.cm"},{"id":"574bd931ba60d","label":"P Albin Andhavarapu","value":"charlesetta_erm.gmail.com"},{"id":"574d9018b7b3c","label":"P Albin K","value":"multicompany_b41a2a2d597dee17f9ce4fe9df457b2c.darwinbox.in"},{"id":"574836544dda6","label":"Padma Lakshmi","value":"shravankumarjbiet.gmail.com"},{"id":"574d9017ed5f5","label":"Prabhukanth K","value":"multicompany_166e291090f89db1c2ef34f8b08c804a.darwinbox.in"},{"id":"57651d79cc575","label":"Prakash S","value":"prakash.test.cm"},{"id":"574bd520a4068","label":"Praveen Kumar Yenagandla","value":"ulysses.hotmail.com"},{"id":"574d9017664f3","label":"Praveen Kumar K","value":"multicompany_a1f1691ebb5e76c9a09c2445c236eea5.darwinbox.in"},{"id":"574d55bda45b8","label":"Preeti Shenoy","value":"multicompany_045e76974084521f1b644b458237cf63.darwinbox.in"},{"id":"5763e1c731587","label":"Preeti Bhuvan","value":"ajay.test.cm"},{"id":"574d4196a6760","label":"Prithvi Biswas","value":"multicompany_577191c52c29594fb905f13172c2ba2d.darwinbox.in"},{"id":"57513de576a15","label":"Qwerty Vhjghjg","value":"multicompany_4e5c3a5f4fcee1c6f9ff4d199140b412.darwinbox.in"},{"id":"575157240ad1a","label":"Rahul Chakravarthy","value":"multicompany_73d45cca27f2eb9c15be17650b42fde3.darwinbox.in"},{"id":"57515c0843a68","label":"Rahul Singh","value":"multicompany_6d1c34c5b1683913f80513452a1aa7dc.darwinbox.in"},{"id":"57651d70e391b","label":"Rahul Venkat","value":"rahulvenkat.gmaiil.com"},{"id":"57651d7ddb720","label":"Rajendra M","value":"rajendra.test.cm"},{"id":"57947e888a309","label":"Rajendra Kumar","value":"rajendra.kumar.com"},{"id":"57651d7c1bab9","label":"Rajesh P","value":"rajesh.test.cm"},{"id":"57651d7bcc112","label":"Rakesh I","value":"rakesh.test.cm"},{"id":"5789e2bc8a0a1","label":"Rakesh Kadam","value":"rakesh.kadam.com"},{"id":"57651d7418ed1","label":"Ram Kumar","value":"ramkumar.gmaiil.com"},{"id":"574bd93255b4b","label":"Ramalingeswara Rao Kothapalli","value":"mthrossell.throssell.co.uk"},{"id":"574d9019a8492","label":"Ramalingeswara Rao K","value":"multicompany_4fc8d492fab2db2a7a1b05278da540b8.darwinbox.in"},{"id":"57651d7a63f36","label":"Ravi I","value":"ravi.test.cm"},{"id":"574bdf4d4da4a","label":"Ravikumar Mangala","value":"octavio.salvadore.yahoo.com"},{"id":"574d901af2233","label":"Ravikumar K","value":"multicompany_4bdb0c1fc26656883c50b7e7b9911165.darwinbox.in"},{"id":"574bf578ab70d","label":"Richa Singh","value":"richa.richa.com"},{"id":"574c0d1abd223","label":"Rishi Singh","value":"rishi.singh.com"},{"id":"57972adbdc9f6","label":"Ritika Shah","value":"ritika.shah.com"},{"id":"57972adba4167","label":"Ritu Singh","value":"multicompany_4e76fb36bf4e37a13944810565918df7.darwinbox.in"},{"id":"574bd0ad12723","label":"Rohan W","value":"multicompany_a155bb7fe8f40a37293c5d06e8e643d5.darwinbox.in"},{"id":"57651d79849b0","label":"Rohan M","value":"rohan.test.cm"},{"id":"5747f93cdf611","label":"Roopam Dbox","value":"rpmlka.multicompany.com"},{"id":"57651d7f84377","label":"Ruturaj M","value":"ruturaj.test.cm"},{"id":"574bdf4d267ae","label":"Sagar Uppala","value":"peter_gutierres.yahoo.com"},{"id":"574d901ac0ace","label":"Sagar K","value":"multicompany_4e4989e432f7a44a60e041590405e8e3.darwinbox.in"},{"id":"57651d707d63b","label":"Sahiti Annam","value":"sahitiannam.gmaiil.com"},{"id":"57651d70aeaa9","label":"Sai Giridhar","value":"saigiridhar.gmaiil.com"},{"id":"57651d7392274","label":"Sai Shankar","value":"saishankar.gmaiil.com"},{"id":"574bdf4cd7759","label":"Sai Manoj Pari","value":"charisse_spinello.spinello.co.uk"},{"id":"574d901a60713","label":"Sai Manoj K","value":"multicompany_e4a485860d0d8777d0320ca3e3f55139.darwinbox.in"},{"id":"57651d76e51f2","label":"Sakshi Gupta","value":"sakshigupta.gmaiil.com"},{"id":"577fa8c0dac75","label":"Salim Khan","value":"salim.khan.com"},{"id":"57651d7735510","label":"Sanchi Rao","value":"sanchirao.gmaiil.com"},{"id":"57651d73d1e85","label":"Sanju Mishra","value":"sanjumishra.gmaiil.com"},{"id":"57651d7942899","label":"Sanket P","value":"sanket.test.cm"},{"id":"574bdf4cb4894","label":"Santhosh Parvathaneni","value":"dewitt.julio.hotmail.com"},{"id":"574d901a2c7cb","label":"Santhosh K","value":"multicompany_b4862f925764c3bed0899dd85b49565c.darwinbox.in"},{"id":"574bd9315664a","label":"Santhosh Reddy Kondi","value":"lura.hotmail.com"},{"id":"574d9018294d7","label":"Santhosh Reddy K","value":"multicompany_6125bfa5a300523d09c351e25a65d45a.darwinbox.in"},{"id":"5767b96b9122b","label":"Santhosh Reddy Minum","value":"santoshm.yahoo.co.in"},{"id":"57999eafd9345","label":"Santosh Reddy","value":"santoshreddy.reddy.com"},{"id":"577f636b0670b","label":"Santosh Kumar Ragam","value":"multicompany_b6f0ddad4b7ad85c73181f3a98e05d3a.darwinbox.in"},{"id":"5757c933b9acf","label":"Sara Jessica Parker","value":"multicompany_28e85e14aa9dccd40636570adcdf30d6.darwinbox.in"},{"id":"574d6f2638fdb","label":"Seema Khan","value":"multicompany_7cf20cddb7e700375d3748dfaaec56de.darwinbox.in"},{"id":"574d41964a7a6","label":"Shakti Mohan","value":"multicompany_ccbee78c665362eb1e90fdd12b52c48b.darwinbox.in"},{"id":"57651d7607f67","label":"Shankar Jain","value":"shankarjain.gmaiil.com"},{"id":"574d33858b433","label":"Shashank Uppala","value":"multicompany_a17064a46c86adbaad3eb84a5127e79b.darwinbox.in"},{"id":"5799b02237362","label":"Sheila Davis","value":"sheila.davis.fedex.com"},{"id":"576525e70bb86","label":"Shikha Sharma","value":"shikhasharma.gmaiil.com"},{"id":"579753a93e812","label":"Shoaib Mallik","value":"sheela.yopmail.com"},{"id":"577f68f0b4c6b","label":"Shravan Kumar","value":"multicompany_f1769687532a62455395022762013ed9.darwinbox.in"},{"id":"57651d729a8a9","label":"Shreyasi Mukherjee","value":"shreyasimukherjee.gmaiil.com"},{"id":"574d5d886376d","label":"Shyamala Reddy","value":"multicompany_35aee0298ff9fd7f7356c1854dd67966.darwinbox.in"},{"id":"5774d7830c7b5","label":"Sid Bxz","value":"asdad.gagsad.com"},{"id":"5798596baa0f6","label":"Sid Mallik","value":"sidq123.rediffmail.com"},{"id":"574d90193bdd0","label":"Sitaram L","value":"multicompany_73125c586160e9799f3a9be11bcf2c1d.darwinbox.in"},{"id":"574bd93208fa3","label":"Sitaramu Kondeti","value":"niesha.bruch.yahoo.com"},{"id":"574bd0ada9bb5","label":"Soham S","value":"multicompany_239637c39061c7a13cff3ee660726d42.darwinbox.in"},{"id":"57651d7d47bb9","label":"Soham I","value":"soham.test.cm"},{"id":"579b1015aa1ba","label":"Sonakshii K","value":"multicompany_5577d285479b0013204c1d165b8fbc71.darwinbox.in"},{"id":"579b0ed9db770","label":"Sonal K","value":"multicompany_d096f58baa9bb57b649e462bdb26a50b.darwinbox.in"},{"id":"574d41961d181","label":"Sourav Singh","value":"multicompany_802638e39df8231d9fe6202e39fedd72.darwinbox.in"},{"id":"577f672b740eb","label":"Srikanth B","value":"multicompany_071b99e1a020b77319646d9436130ba9.darwinbox.in"},{"id":"574bd520eb737","label":"Srinivasa Rao Malli","value":"erampy.rampy.co.uk"},{"id":"574d9017a91b9","label":"Srinivasa Rao K","value":"multicompany_8537feff2e64e7345d8ae69be5ecd866.darwinbox.in"},{"id":"5763e1c78f1f2","label":"Sruthi Aditya","value":"atul.test.cm"},{"id":"574d55bd1dec9","label":"Sukriti Kakkar","value":"multicompany_bcf1f6346f59c11683dbac6e7ccb9b51.darwinbox.in"},{"id":"57651d7453b36","label":"Sukriti Gupta","value":"sukritigupta.gmaiil.com"},{"id":"57973cc4cf9e8","label":"Sunil Mallik","value":"sunil.yopmail.com"},{"id":"5797408036c70","label":"Sunil Mallik","value":"sunil.rediffmail.com"},{"id":"574d3fa84c4ee","label":"Supriya Gupta","value":"multicompany_0b9c2a8e0f7d2cc487c16e3181dd9e4f.darwinbox.in"},{"id":"574bdf4d7297b","label":"Surendra Udipi","value":"ciara_cobbley.hotmail.com"},{"id":"574d901b2c5b8","label":"Surendra K","value":"multicompany_4d27d68a113c482d12743b559ea74df4.darwinbox.in"},{"id":"577a0e9596e4e","label":"Svd Vdfv","value":"multicompany_30a81b0abbd4327c72093346cc1bad3a.darwinbox.in"},{"id":"574d6f25ea55a","label":"Swaminathan Iyer","value":"multicompany_c6bf930d32fc6e06693aa2cc1ed34333.darwinbox.in"},{"id":"5763e1c6452ec","label":"Swathi Sriraman","value":"moksh.test.cm"},{"id":"5763e1c6dc039","label":"Swetha Iyer","value":"vijendra.test.cm"},{"id":"57651d78f3a5c","label":"Tejas I","value":"tejas.test.cm"},{"id":"57554013ee9ea","label":"Thomas Cook","value":"multicompany_30bda4b36fd2a1f381986eca16822063.darwinbox.in"},{"id":"5774d62885a92","label":"Tuna Sasff","value":"assddee.das.com"},{"id":"57651d7b3e6da","label":"Tushar S","value":"tushar.test.cm"},{"id":"574d419678b0c","label":"Uday Chopra","value":"UdayChopra.gmaiil.com"},{"id":"5767b96cc6afe","label":"Uday Katragadda","value":"uday987.yahoo.com"},{"id":"574d55bd7684b","label":"Ujwal Singh","value":"multicompany_08d365c7244e86b52969b33f6f76f6c4.darwinbox.in"},{"id":"5767b9baf24c1","label":"Ujwal Sen","value":"ujwal3456.gmail.com"},{"id":"57651d7168cb5","label":"Vaibhav Bamankar","value":"vaibhavbamankar.gmaiil.com"},{"id":"574d3677f03a5","label":"Vanita V","value":"vanita.vv.io"},{"id":"5797408064f42","label":"Vidhya Nair","value":"Vidhya.rediffmail.com"},{"id":"57651d7a20535","label":"Vijay P","value":"vijay.test.cm"},{"id":"574d50c08258b","label":"Vijaya V","value":"multicompany_ae4c2cb5631d28287434e23c312513a5.darwinbox.in"},{"id":"574d522b48b51","label":"Vijaya V","value":"multicompany_f84966ee6f02168834d937d36bd57ea4.darwinbox.in"},{"id":"574bd9317855d","label":"Vijayalakshmi Patlolla","value":"yuette.klapec.klapec.co.uk"},{"id":"574d90184d3b7","label":"Vijayalakshmi K","value":"multicompany_28d3cf1cafc0f0335be4c3f54ed4fe33.darwinbox.in"},{"id":"57651d7e31d25","label":"Vijendra S","value":"vijendra.test.cm"},{"id":"5767b96a70782","label":"Vinay Shankar","value":"vinay.s.yahoo.com"},{"id":"57651d80ae773","label":"Vinod I","value":"vinod.test.cm"},{"id":"574922735c6fd","label":"Vinodha Shankar","value":"multicompany_73954c8e048c4c02896e37063faa17ef.darwinbox.in"},{"id":"57651d786170d","label":"Vishal S","value":"vishal.test.cm"},{"id":"57651d7224d3e","label":"Vishesh Petwal","value":"visheshpetwal.gmaiil.com"},{"id":"574d90178bed4","label":"Vishnu Vardhan Goud K","value":"multicompany_d74489050229f59a7097ea50c0c1f154.darwinbox.in"},{"id":"57651d7b860d3","label":"Yash P","value":"yash.test.cm"},{"id":"57651d769c19b","label":"Yuga Borkar","value":"yugaborkar.gmaiil.com"}];mentionsAutoComplete();$(document).ready(function(){});function updateNoifications(){$.ajax({type:"GET",dataType:"json",url:"/notifications/show",success:function(data){if(data.status=="success"){if(data.request_unread_count!=null||data.notification_unread_count!=null){var counts=0;var request_count=(!isNaN(data.request_unread_count))?data.request_unread_count:0;var notification_count=(!isNaN(data.notification_unread_count))?data.notification_unread_count:0;counts=request_count+notification_count;$("#darwinbox-title-id").html("").html("("+counts+") darwinbox - Sum Up Your HR");}else{$("#darwinbox-title-id").html("").html("darwinbox");}$("#notification-menu").html("").html(data.update_notifications);if(data.request_unread_count!=null){$("#request-count span").html("").html("&nbsp;&nbsp;"+data.request_unread_count+"&nbsp;&nbsp;");}if(data.notification_unread_count!=null){$("#notification-count span").html("").html("&nbsp;&nbsp;"+data.notification_unread_count+"&nbsp;&nbsp;");}}},beforeSend:function(){var urlpathname=window.location.pathname;var hidediv=true;switch(urlpathname){case"/leaves":hidediv=false;break;case"/manage/calendar":hidediv=false;break;}if(hidediv){$("#waiter").hide();}}});}$(document.body).on("click",".request_attendance",function(e){e.preventDefault();var request=$(this).attr("id").split("_request_");$.ajax({type:"POST",dataType:"json",data:{action:request[0],id:request[1]},url:"/request/process",success:function(data){if(data.status=="success"){$("#ar_status_container_"+data.request).html("");$("#ar_status_container_"+data.request).html(data.update);showNotification({message:data.update,type:"success",autoClose:true,duration:5});}else{showNotification({message:data.error,type:"error",autoClose:true,duration:5});}}});});$(document.body).on("click",".request_message_attendance_log",function(e){e.preventDefault();var request=$(this).attr("id").split("_requestlog_");$.ajax({type:"POST",dataType:"json",data:{action:request[0],id:request[1]},url:"/request/process",success:function(data){if(data.status=="success"){$("#arl_status_container_"+data.request).html("");$("#arl_status_container_"+data.request).html(data.update);showNotification({message:data.update,type:"success",autoClose:true,duration:5});}else{showNotification({message:data.error,type:"error",autoClose:true,duration:5});}}});});});
+//]]></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b2f0be28e7","applicationID":"20463003","transactionName":"Y1BRMkNVW0FRBRBfXFoacgVFXVpcHzUBQkddW1QVcltbRkIJCFpWRhpBA0FbR0ZZCANeWlFHUhRSXEw=","queueTime":0,"applicationTime":1157,"atts":"TxdSRAtPSE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script>$(document).ready(function(){$(".container-minheight").css("min-height",($(window).height()-121));});$.fn.modal.Constructor.prototype.enforceFocus=function(){};</script>
+<!-- INTERCOM CODE -->
+<!-- INTERCOM CODE -->
+</html>

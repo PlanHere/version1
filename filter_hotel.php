@@ -1,16 +1,16 @@
 <?php
 include 'connection.php';
 error_reporting(0);
-$meal=implode(',',$_GET['meal']);
-$intcus=implode(',',$_GET['incusine']);
-$indcus=implode(',',$_GET['indcusine']);
-$spl=implode(',',$_GET['spl']);
-$fac=implode(',',$_GET['facilities']);
+$meal=implode('%',$_GET['meal']);
+$intcus=implode('%',$_GET['incusine']);
+$indcus=implode('%',$_GET['indcusine']);
+$spl=implode('%',$_GET['spl']);
+$fac=implode('%',$_GET['facilities']);
 if(empty($_GET['meal']) && empty($_GET['intcus']) && empty($_GET['indcus']) && empty($_GET['spl']) && empty($_GET['fac'])){
-header("Location:hotel_grid.php");	
+header("Location:hotel_grid.php");
 }
 else{
-$q="SELECT * FROM v_hotel WHERE meal LIKE '%$meal%' AND internationalcus LIKE '%$intcus%' AND indiancus LIKE '%$indcus%' and specials LIKE '%$spl%' AND facilities LIKE '%$fac%'";
+$q="SELECT * FROM vendor_login,v_hotel WHERE meal LIKE '%$meal%' AND internationalcus LIKE '%$intcus%' AND indiancus LIKE '%$indcus%' and specials LIKE '%$spl%' AND facilities LIKE '%$fac%'";
 $r=mysql_query($q);
 $count=mysql_num_rows($r);
 if($count>0){
@@ -22,12 +22,13 @@ if($count>0){
 			while ($row1=mysql_fetch_array($r1)) {
 			$name=$row1['name'];
 								$rating=$row1['rating'];
-								$price=$row1['price'];?>
+								$price=$row1['price'];
+								$logo=$row1['logo'];?>
 								<div class="col-md-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
 							<div class="hotel_container">
 								<div class="img_container">
 									<a href="single_hotel.html">
-									<img src="img/hotel_1.jpg" width="800" height="533" class="img-responsive" alt="">
+									<img src="<?php echo $row['logo'];?>" width="800" height="533" class="img-responsive" alt="">
 									<div class="ribbon top_rated"></div>
 		                            <div id="score"><span><?php echo $rating; ?></span>Good</div>
 									<div class="short_info hotel">

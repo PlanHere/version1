@@ -10,7 +10,7 @@
     <meta name="description" content="Our Plan, Your Joy.Table reservation app,custom search for any restaurant,marriage is made easier">
     <meta name="author" content="Plan Here">
     <title>Your Payment | Plan Here</title>
-    
+
     <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
@@ -32,15 +32,15 @@
 
     <!-- CSS -->
     <link href="css/base.css" rel="stylesheet">
-    
+
     <!-- Radio and check inputs -->
     <link href="css/skins/square/grey.css" rel="stylesheet">
-	
+
     <!-- Google web fonts -->
    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-        
+
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -50,7 +50,7 @@
     ?>
 </head>
 <body>
- 
+
 <!--[if lte IE 8]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
 <![endif]-->
@@ -76,34 +76,34 @@
     <!-- End Header -->
 
 
-    
+
    <section id="hero_2">
 	<div class="intro_title animated fadeInDown">
            <h1>Order Your Happiness</h1>
             <div class="bs-wizard">
-  			
+
                 <div class="col-xs-4 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum">Your cart</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="./cart.php" class="bs-wizard-dot"></a>
                 </div>
-                               
+
                 <div class="col-xs-4 bs-wizard-step active">
                   <div class="text-center bs-wizard-stepnum">Your details</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
                 </div>
-            
+
               <div class="col-xs-4 bs-wizard-step disabled">
                   <div class="text-center bs-wizard-stepnum">Finish!</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="./confirmation.php" class="bs-wizard-dot"></a>
-                </div>  
-                   
-		</div>  <!-- End bs-wizard --> 
-    </div>   <!-- End intro-title --> 
+                </div>
+
+		</div>  <!-- End bs-wizard -->
+    </div>   <!-- End intro-title -->
 </section><!-- End Section hero_2 -->
-    
+
     <div id="position">
     	<div class="container">
                 	<ul>
@@ -119,22 +119,19 @@
 		<div class="col-md-8">
 			<div class="form_title">
 				<h3><strong>1</strong>Your Details</h3>
-				<p>
-					Mussum ipsum cacilds, vidis litro abertis.
-				</p>
 			</div>
 			<div class="step">
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>First name</label>
-							<input type="text" class="form-control" id="firstname_booking" name="firstname_booking">
+							<input type="text" class="form-control" id="firstname_booking" name="firstname" value="<?=$_POST['first_name'];?>" readonly>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Last name</label>
-							<input type="text" class="form-control" id="lastname_booking" name="lastname_booking">
+							<input readonly type="text" class="form-control" id="lastname_booking" name="lastname" value="<?=$_POST['last_name'];?>">
 						</div>
 					</div>
 				</div>
@@ -142,148 +139,88 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" id="email_booking" name="email_booking" class="form-control">
+							<input type="email" readonly id="email_booking" name="email" class="form-control" value="<?=$_POST['email'];?>">
 						</div>
 					</div>
-					<div class="col-md-6 col-sm-6">
-						<div class="form-group">
-							<label>Confirm email</label>
-							<input type="email" id="email_booking_2" name="email_booking_2" class="form-control">
-						</div>
-					</div>
-				</div>
-                <div class="row">
-					<div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<label>Telephone</label>
-							<input type="text" id="telephone_booking" name="telephone_booking" class="form-control">
+							<input type="text" readonly id="telephone_booking" name="telephone" class="form-control" value="<?=$_POST['phone'];?>">
 						</div>
 					</div>
 				</div>
+
 			</div><!--End step -->
-            
+
 			<div class="form_title">
-				<h3><strong>2</strong>Payment Information</h3>
-				<p>
-					Mussum ipsum cacilds, vidis litro abertis.
-				</p>
+				<h3><strong>2</strong>Booking Details</h3>
 			</div>
 			<div class="step">
 				<div class="form-group">
-					<label>Name on card</label>
-					<input type="text" class="form-control" id="name_card_bookign" name="name_card_bookign">
+					<label>Payee Name</label>
+					<input type="text"  class="form-control" id="name_card_bookign" name="name_bookign">
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<div class="form-group">
-							<label>Card number</label>
-							<input type="text" id="card_number" name="card_number" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<img src="img/cards.png" width="207" height="43" alt="Cards" class="cards">
-					</div>
+          <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label>Adults</label>
+                  <div class="numbers-row">
+                      <input readonly type="text" max='2' id="adults_hotel" class="qty2 form-control required" name="adults" value="<?php echo $_POST['adults'];?>">
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label>Children</label>
+                  <div class="numbers-row">
+                      <input readonly type="text" max='2' id="children_hotels" class="qty2 form-control required" name="children" value="<?php echo $_POST['children'];?>">
+                  </div>
+              </div>
+          </div>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<label>Expiration date</label>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" id="expire_month" name="expire_month" class="form-control" placeholder="MM">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" id="expire_year" name="expire_year" class="form-control" placeholder="Year">
-								</div>
-							</div>
-						</div>
-					</div>
+          <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                  <label>No Of Rooms</label>
+                  <div class="numbers-row">
+                      <input readonly type="text" value="<?php echo ceil($_POST['adults']/2);?>" min="<?php echo ceil($_POST['adults']/2);?>" id="no_of_rooms" class="qty2 form-control required" name="rooms">
+                  </div>
+              </div>
+          </div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>Security code</label>
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
-										<input type="text" id="ccv" name="ccv" class="form-control" placeholder="CCV">
+										<input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP">
 									</div>
 								</div>
-								<div class="col-md-8">
-									<img src="img/icon_ccv.gif" width="50" height="29" alt="ccv"><small>Last 3 digits</small>
+							</div>
+						</div>
+					</div>
+          <div class="col-md-6">
+						<div class="form-group">
+							<label>Security code</label>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+                    <?php
+                    include 'connection.php';
+                    $id=$_POST['id'];
+                        $q="select * from hotel_data where id=$id";
+                        $r=mysql_query($q);
+                        $row=mysql_fetch_array($r);
+                        $price=$row['price'];
+                    ?>
+										<input readonly type="text" name="amount" value="<?php echo $price*ceil($_POST['adults']/2);?>" class="form-control">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div><!--End row -->
-                
-				<hr>
-                
-				<h4>Or checkout with Paypal</h4>
-				<p>
-					Lorem ipsum dolor sit amet, vim id accusata sensibus, id ridens quaeque qui. Ne qui vocent ornatus molestie, reque fierent dissentiunt mel ea.
-				</p>
-				<p>
-					<img src="img/paypal_bt.png" alt="">
-				</p>
 			</div><!--End step -->
-            
-			<div class="form_title">
-				<h3><strong>3</strong>Billing Address</h3>
-				<p>
-					Mussum ipsum cacilds, vidis litro abertis.
-				</p>
-			</div>
-			<div class="step">
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<div class="form-group">
-							<label>Country</label>
-							<select class="form-control" name="country" id="country">
-								<option value="" selected>Select your country</option>
-								<option value="Europe">Europe</option>
-								<option value="United states">United states</option>
-								<option value="Asia">Asia</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<div class="form-group">
-							<label>Street line 1</label>
-							<input type="text" id="street_1" name="street_1" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<div class="form-group">
-							<label>Street line 2</label>
-							<input type="text" id="street_2" name="street_2" class="form-control">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label>City</label>
-							<input type="text" id="city_booking" name="city_booking" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="form-group">
-							<label>State</label>
-							<input type="text" id="state_booking" name="state_booking" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="form-group">
-							<label>Postal code</label>
-							<input type="text" id="postal_code" name="postal_code" class="form-control">
-						</div>
-					</div>
-				</div><!--End row -->
-			</div><!--End step -->
-            
 			<div id="policy">
 
 				<div class="form-group">
@@ -292,7 +229,7 @@
 				<a href="confirmation.php" class="btn_1 green medium">Book now</a>
 			</div>
 		</div>
-        
+
 		<aside class="col-md-4">
 		<div class="box_style_1">
 			<h3 class="inner">- Summary -</h3>
@@ -350,13 +287,13 @@
 				<small>Monday to Sunday <br>9.00am to 9.00pm</small>
 			</div>
 		</aside>
-        
+
 	</div><!--End row -->
 </div><!--End container -->
 
  <!--Footer Start-->
         <?php
-           include('./footer.php'); 
+           include('./footer.php');
         ?>
 	    <!-- End footer -->
 
@@ -370,7 +307,7 @@
 
 <!-- Specific scripts -->
 <script src="js/icheck.js"></script>
-<script>  
+<script>
 $('input').iCheck({
    checkboxClass: 'icheckbox_square-grey',
    radioClass: 'iradio_square-grey'

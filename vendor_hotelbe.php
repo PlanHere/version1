@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 require ('connection.php');
 //include 'image.php';
 if(!empty($_POST['username']) && !empty($_POST['emailid']) && !empty($_POST['password']) && !empty($_POST['phno']))
@@ -23,7 +23,7 @@ if(isset($_REQUEST['submit']))
 						{
 
 							$file = $_FILES['logo']['tmp_name'];
-							$logo = addslashes(file_POST_contents($_FILES['logo']['tmp_name']));
+							$logo = addslashes(file_get_contents($_FILES['logo']['tmp_name']));
 							$logo_name = addslashes($_FILES['logo']['name']);
 
 							move_uploaded_file($_FILES["logo"]["tmp_name"],"logos/"."$name".$_FILES["logo"]["name"]);
@@ -57,6 +57,11 @@ if($q5){
 		$id=$row6['id'];
 		session_start();
 		$_SESSION['username']=$username;
+		$subject = "Thanks From Team PlanHere";
+		$message = "Dear $name,\nThanks For Joining with PlanHere";
+		$headers = "From : PlanHere <info@planhere.in>\r\n";
+		$headers.="Relpy-to : PlanHere Support<support@planhere.in>";
+		mail($email, $subject, $message,$headers);
 		header("Location:./admin/index.php");
 	//header("Location:single_hotel_working_booking.php?id=$id");
 	}
